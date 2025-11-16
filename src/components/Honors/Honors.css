@@ -1,0 +1,136 @@
+.honors-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow: hidden;
+   padding-top: 20px;
+   padding-bottom: 30px;
+   min-height: 500px;
+}
+
+.honors-container h2 {
+   margin: 10px 0;
+}
+
+.honors-container p {
+   font-size: 1.5rem;
+   color: #5a5a5a;
+   margin-top: 5px;
+   margin-bottom: 20px;
+}
+
+.honors-slider-wrapper {
+   background-color: #edececda;
+   padding: 10px;
+   border-radius: 15px;
+   width: 1000px;
+   overflow: hidden;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   position: relative;
+}
+
+.honors-slider {
+   display: flex;
+   width: 100%;
+   transition: transform 0.5s ease-in-out;
+}
+
+.honors-slide {
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   flex-shrink: 0;
+}
+
+.honors-slide a {
+   display: block;
+   line-height: 0;
+   cursor: zoom-in;
+}
+
+.honors-slide img {
+   width: 100%;
+   height: 400px;
+   object-fit: contain;
+   transition: transform 0.3s ease-in-out;
+}
+
+.honors-slide img:hover {
+   transform: scale(1.01);
+}
+
+.honors-slider-btn-container {
+   position: absolute;
+   top: 50%;
+   left: 4%;
+   right: 4%;
+   transform: translateY(-50%);
+   display: flex;
+   justify-content: space-between;
+   z-index: 1000;
+}
+
+.honors-slider-btn {
+   border: 1px solid #007bff;
+   border-radius: 50%;
+   font-size: 1.5rem;
+   width: 50px;
+   height: 50px;
+   transition: all 0.3s ease-in-out;
+}
+
+.honors-slider-btn:hover {
+   background-color: #fff;
+   color: #007bff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1920px) {
+   .honors-container h2 {
+      font-size: 6rem;
+   }
+
+   .honors-container p {
+      font-size: 2.5rem;
+      margin: 1rem;
+   }
+
+   .honors-slider-wrapper {
+      width: 1200px;
+   }
+
+   .honors-slide img {
+      height: 600px;
+   }
+   
+   .honors-slider-btn {
+      width: 75px;
+      height: 75px;
+      font-size: 2rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .honors-container {
+      padding-top: 0;
+   }
+
+   .honors-container p {
+      font-size: 1.8rem;
+      text-align: center;
+   }
+
+   .honors-slider-wrapper {
+      width: 95vw;
+   }
+
+   .honors-slide img {
+      width: 100%;
+   }
+
+   .honors-slider-btn-container {
+      display: none;
+   }
+}
