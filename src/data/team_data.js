@@ -2,8 +2,8 @@ export const teamData = [
    {
       img: '/src/assets/team/7000万.jpg',
       name: 'HSD-DGUT团队',
-      title: '四名在读大学生',
-      detail: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+      title: '核心开发团队',
+      detail: '由充满激情的在读大学生组成，致力于用技术创造价值，用代码改变世界。',
    },
    {
       img: '/src/assets/team/DSC09212.JPG',

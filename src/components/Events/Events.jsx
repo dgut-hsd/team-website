@@ -3,7 +3,10 @@ import './Events.css';
 export function Events() {
    return (
       <div className='events-container' id='events' data-aos='fade-up'>
-         <h2>活动剪影</h2>
+         <h2 className="text-container">
+            <span>活动</span>
+            <span className="text">剪影</span>
+         </h2>
          <p>在HSD，我们不仅编码，更注重分享与交流</p>
 
          <div className='events-gallery-wrapper'>

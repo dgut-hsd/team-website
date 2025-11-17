@@ -3,7 +3,10 @@ import './Honors.css';
 export function Honors() {
    return (
       <div className='honors-container' id='honors' data-aos='fade-up'>
-         <h2>荣誉殿堂</h2>
+         <h2 className="text-container">
+            <span>荣誉</span>
+            <span className="text">殿堂</span>
+         </h2>
          <p>汗水与智慧的结晶，是我们实力的最好证明</p>
 
          <div className='honors-slider-wrapper'>

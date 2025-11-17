@@ -9,7 +9,10 @@ import './Projects.css';
 export function Projects() {
    return (
       <div className='projects-container' id='projects'>
-         <h2>项目展示</h2>
+         <h2 className="text-container">
+            <span>项目</span>
+            <span className="text">展示</span>
+         </h2>
 
          <div className='projects-wrapper'>
             <Swiper
@@ -17,7 +20,7 @@ export function Projects() {
                spaceBetween={15}
                slidesPerView={1}
                navigation 
-               loop={true}
+               loop={projectsData.length > 1}
                breakpoints={{
                   769: { slidesPerView: 2 },
                   1441: { slidesPerView: 3 },

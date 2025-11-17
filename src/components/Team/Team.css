@@ -1,23 +1,16 @@
 .team-container {
    background-color: #fff;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   min-height: 500px;
-   padding: 20px;
-   overflow: hidden;
+   gap: 1.5rem;
 }
 
 .team-container h2,
 .team-container p {
-   margin: 10px 0;
+   margin: 0;
 }
 
 .team-container p {
    color: #5a5a5a;
    font-size: 1.4rem;
-   margin-bottom: 20px;
 }
 
 .team-card-wrapper {
@@ -26,7 +19,6 @@
    display: flex;
    align-items: flex-start;
    gap: 10px;
-   margin-bottom: 20px;
 }
 
 .team-card-container {
@@ -104,7 +96,6 @@
 .team-slider-btn {
    display: flex;
    gap: 10px;
-   margin-bottom: 10px;
 }
 
 .team-btn {
@@ -129,8 +120,6 @@
 
    .team-container p {
       font-size: 2.5rem;
-      margin: 1rem;
-      margin-bottom: 2rem;
    }
 
    .team-card-container {

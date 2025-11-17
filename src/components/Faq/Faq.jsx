@@ -9,13 +9,16 @@ export function Faq() {
       if (activeIndex === index) {
          setActiveIndex(null);
       } else {
-         setActiveIndex(true);
+         setActiveIndex(index);
       }
    };
 
    return (
       <div className='faq-container' id='faq'>
-         <h2>常见问题</h2>
+         <h2 className="text-container">
+            <span>常见</span>
+            <span className="text">问题</span>
+         </h2>
          <div className='faq-wrapper'>
             {faqData.map((item, index) => (
                <div
