@@ -29,8 +29,6 @@ export default function App() {
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
 
-   console.log(window.innerWidth);
-
    return (
       <div className='wrapper'>
          <Header />

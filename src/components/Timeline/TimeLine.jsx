@@ -51,25 +51,27 @@ export function TimeLine() {
         <span>发展</span>
         <span className="text">历程</span>
       </h2>
-      <p className="timeline-text">从一个想法到一群人的热爱，我们从未停止脚步</p>
+      <p className="timeline-text">
+        从一个想法到一群人的热爱，我们从未停止脚步
+      </p>
 
       <Timeline
         position="right"
         sx={{
-          [`& .${timelineItemClasses.root}:before`]: {
-            flex: 0,
-            padding: 0,
-          },
-          maxHeight: "65vh",
-          overflowY: "auto",
+          minHeight: "65vh",
+          overflowY: "hidden",
           padding: "6px 16px",
           width: "100%",
+          marginLeft: {
+            xs: 0, 
+            sm: "-25rem",
+          },
           maxWidth: {
             xs: "100%",
-            sm: "600px",
-            md: "700px",
-            lg: "800px",
-            xl: "900px",
+            sm: "1400px",
+            md: "2400px",
+            lg: "3540px",
+            xl: "5000px",
           },
         }}
       >
