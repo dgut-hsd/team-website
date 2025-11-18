@@ -1,16 +1,10 @@
+/* === Base (Mobile) Styles === */
 .events-container {
    background-color: #fff;
-}
-
-.events-container h2 {
-   margin: 10px 0;
-}
-
-.events-container p {
-   color: #5a5a5a;
-   margin: 5px 0;
-   margin-bottom: 20px;
-   font-size: 1.4rem;
+   padding: 2rem 1rem 5rem;
+   text-align: center;
+   overflow: hidden;
+   mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
 
 .events-gallery-wrapper {
@@ -29,8 +23,9 @@
 
 .events-swiper-1 .swiper-slide,
 .events-swiper-2 .swiper-slide {
-   width: 280px;
-   height: 230px;
+   width: 280px !important;
+   height: 210px;
+   flex-shrink: 0;
 }
 
 .events-swiper-1 .swiper-wrapper,
@@ -46,23 +41,40 @@
    object-fit: cover;
    border-radius: 15px;
    cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.events-swiper-1 .swiper-slide img:hover,
+.events-swiper-2 .swiper-slide img:hover {
+   transform: scale(1.01);
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .events-container {
+      padding: 3rem 2rem 6rem;
+   }
+}
+
+/* === Laptop & Up === */
+@media (min-width: 1100px) {
+   .events-swiper-1 .swiper-slide,
+   .events-swiper-2 .swiper-slide {
+      height: 230px;
+   }
+}
+
+/* === Desktop & Up === */
+@media (min-width: 1440px) {
+   .events-swiper-1 .swiper-slide,
+   .events-swiper-2 .swiper-slide {
+      height: 210px;
+   }
+}
+
+/* === Large Desktop & Up === */
 @media (min-width: 1920px) {
-   .events-container h2,
-   .events-container p {
-      margin: 1rem 0;
-   }
-
-   .events-container h2 {
-      font-size: 6rem;
-   }
-
-   .events-container p {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-   }
-
    .events-swiper-1 .swiper-slide,
    .events-swiper-2 .swiper-slide {
       width: 350px;
@@ -71,30 +83,5 @@
 
    .events-swiper-2 .swiper-slide {
       margin-bottom: 2rem;
-   }
-}
-
-@media (max-width: 1440px) {
-   .events-swiper-1 .swiper-slide,
-   .events-swiper-2 .swiper-slide {
-      height: 210px;
-   }
-}
-
-@media (max-width: 768px) {
-   .events-container h2 {
-      font-size: 3.5rem;
-      margin: 5px 0;
-   }
-
-   .events-container p {
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 5px 10px;
-      margin-bottom: 2rem;
-   }
-
-   .events-container {
-      padding-bottom: 5rem;
    }
 }

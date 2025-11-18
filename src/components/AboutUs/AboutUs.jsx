@@ -19,7 +19,7 @@ export function AboutUs() {
           <span className="counter">
             <CountUp
               end={50}
-              duration={3}
+              duration={5}
               enableScrollSpy
               scrollSpyOnce={true}
             />
@@ -31,7 +31,7 @@ export function AboutUs() {
           <span className="counter">
             <CountUp
               end={12}
-              duration={3}
+              duration={5}
               enableScrollSpy
               scrollSpyOnce={true}
             />
@@ -43,7 +43,7 @@ export function AboutUs() {
           <span className="counter">
             <CountUp
               end={50}
-              duration={3}
+              duration={5}
               enableScrollSpy
               scrollSpyOnce={true}
             />

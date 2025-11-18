@@ -14,7 +14,7 @@ export function Faq() {
    };
 
    return (
-      <div className='faq-container' id='faq'>
+      <div className='faq-container' id='faq' data-aos="fade-up">
          <h2 className="text-container">
             <span>常见</span>
             <span className="text">问题</span>

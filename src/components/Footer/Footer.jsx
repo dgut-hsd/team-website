@@ -1,3 +1,4 @@
+import qrCodeImage from '../../assets/QR/image.png';
 import './Footer.css';
 
 export function Footer() {
@@ -19,7 +20,7 @@ export function Footer() {
 
                <div className='footer-qr'>
                   <h3>加入招新群</h3>
-                  <img src='/assets/QR/image.png' alt='qrcode' />
+                  <img src={qrCodeImage} alt='qrcode' />
                </div>
             </div>
 

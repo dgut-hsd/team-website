@@ -1,8 +1,9 @@
+/* === Base (Mobile) Styles === */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border-bottom: 1px solid #e0e0e0;
   position: sticky;
   top: 0;
@@ -44,12 +45,32 @@ header a {
 }
 
 .menu {
-  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
   align-items: center;
-  gap: 1.8rem;
-  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
   list-style: none;
   margin: 5px 0;
+  display: flex;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .menu-toggle {
@@ -58,7 +79,7 @@ header a {
 }
 
 .hamburger {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -96,7 +117,8 @@ header a {
   color: #5a5a5a;
   transition: all 0.3s ease-in-out;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding: 10px 0;
 }
 
 .nav-links:hover,
@@ -106,8 +128,7 @@ header a {
   box-shadow: 0 2px 0 #007bff;
 }
 
-.nav-join-link,
-.hero-join-link {
+.nav-join-link {
   background-color: #007bff;
   color: white;
   border: 1px solid #007bff;
@@ -116,15 +137,38 @@ header a {
   border-radius: 15px;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   line-height: 1.6;
+  display: none;
+  max-width: 0;
+  max-height: 0;
+  visibility: hidden;
 }
 
 .nav-join-link:hover,
-.nav-join-link:focus,
-.hero-join-link:hover,
-.hero-join-link:focus {
+.nav-join-link:focus {
   color: #007bff;
   background-color: #fff;
   outline: none;
+}
+
+.menu-toggle:checked ~ .menu {
+  max-height: 100vh;
+  padding: 1.5rem 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-toggle:checked ~ .hamburger span {
+  background: transparent;
+}
+
+.menu-toggle:checked ~ .hamburger span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-toggle:checked ~ .hamburger span::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 @keyframes text-gradient-animation {
@@ -136,6 +180,65 @@ header a {
   }
 }
 
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+  header {
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .menu {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    backdrop-filter: none;
+    max-height: none;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .menu li {
+    width: auto;
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+
+  .nav-join-link {
+    display: block;
+    max-width: none;
+    max-height: none;
+    visibility: visible;
+  }
+}
+
+/* === Laptop & Up === */
+@media (min-width: 1100px) {
+  .icon {
+    font-size: 1.8rem;
+  }
+
+  .menu {
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    font-size: 1.2rem;
+  }
+}
+
+/* === Large Desktop & Up === */
 @media (min-width: 1920px) {
   header {
     justify-content: space-between;
@@ -160,93 +263,5 @@ header a {
     margin-right: 2rem;
     padding: 0.6rem 1.5rem;
     font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 1440px) {
-   .icon {
-      font-size: 1.8rem;
-   }
-
-  .menu {
-    gap: 1.2rem;
-  }
-
-  .nav-links {
-   font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    justify-content: space-between;
-    padding: 1rem 1.2rem;
-  }
-
-  .icon {
-    font-size: 2rem;
-  }
-
-  .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    max-height: 0;
-    padding: 0;
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
-    transition: all 0.4s ease;
-  }
-
-  .menu li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .nav-links {
-    padding: 10px 0;
-    font-size: 1.5rem;
-  }
-
-  .menu-toggle:checked ~ .menu {
-    max-height: 100vh;
-    padding: 1.5rem 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .menu-toggle:checked ~ .hamburger span {
-    background: transparent;
-  }
-
-  .menu-toggle:checked ~ .hamburger span::before {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  .menu-toggle:checked ~ .hamburger span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-
-  .nav-join-link {
-    display: none;
-    max-width: 0;
-    max-height: 0;
-    visibility: hidden;
   }
 }

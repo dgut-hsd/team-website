@@ -1,26 +1,39 @@
-import './Honors.css';
+import React from "react";
+import Marquee from "react-fast-marquee";
+import { Tooltip } from "react-tooltip";
+import { honorsData } from "../../data/honors-data";
+
+import "./Honors.css";
 
 export function Honors() {
-   return (
-      <div className='honors-container' id='honors' data-aos='fade-up'>
-         <h2 className="text-container">
-            <span>荣誉</span>
-            <span className="text">殿堂</span>
-         </h2>
-         <p>汗水与智慧的结晶，是我们实力的最好证明</p>
+  return (
+    <div className="honors-container" id="honors" data-aos="fade-up">
+      <h2 className="text-container">
+        <span>荣誉</span>
+        <span className="text">殿堂</span>
+      </h2>
 
-         <div className='honors-slider-wrapper'>
-            <div className='honors-slider-btn-container'>
-               <button className='honors-slider-btn honors-prev-btn btn'>
-                  ←
-               </button>
-               <button className='honors-slider-btn honors-next-btn btn'>
-                  →
-               </button>
+      <Marquee
+        speed={60}
+        gradient={true}
+        gradientColor={[240, 244, 248]}
+        gradientWidth={100}
+      >
+        {honorsData.map((honor) => {
+          return (
+            <div
+              className="honor-card"
+              key={honor.id}
+              data-tooltip-id="honor-tooltip"
+              data-tooltip-content={honor.title}
+            >
+              <img src={honor.src} alt={honor.title} />
             </div>
+          );
+        })}
+      </Marquee>
 
-            <div className='honors-slider'></div>
-         </div>
-      </div>
-   );
+      <Tooltip id="honor-tooltip" className="custom-tooltip" />
+    </div>
+  );
 }
