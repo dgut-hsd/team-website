@@ -51,7 +51,7 @@ export function TimeLine() {
         <span>发展</span>
         <span className="text">历程</span>
       </h2>
-      <p>从一个想法到一群人的热爱，我们从未停止脚步</p>
+      <p className="timeline-text">从一个想法到一群人的热爱，我们从未停止脚步</p>
 
       <Timeline
         position="right"

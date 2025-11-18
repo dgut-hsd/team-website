@@ -1,6 +1,5 @@
 /* === Base (Mobile) Styles === */
 .honors-container {
-   width: 100%;
    overflow: hidden;
    position: relative;
    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
@@ -18,10 +17,6 @@
    transition: transform 0.3s ease-in-out;
 }
 
-.rfm-marquee-container {
-   overflow-y: hidden;
-}
-
 .honor-card:hover {
    transform: scale(1.05);
    z-index: 10;
@@ -36,9 +31,16 @@
    border-radius: 30px;
 }
 
+.rfm-marquee-container {
+   overflow-y: hidden;
+}
 
 /* === Tablet & Up === */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+   .honor-card {
+      height: 200px;
+      width: 280px;
+   }
 }
 
 /* === Laptop & Up === */
@@ -47,4 +49,8 @@
 
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
+   .honor-card {
+      height: 400px;
+      width: 480px;
+   }
 }

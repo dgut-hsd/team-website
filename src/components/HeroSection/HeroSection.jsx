@@ -64,6 +64,13 @@ export function HeroSection() {
             opacity: 0.4,
             width: 1,
          },
+         life: {
+            duration: {
+               sync: false,
+               value: 5,
+            },
+            count: 0,
+         },
          move: {
             direction: 'none',
             enable: true,
@@ -80,6 +87,7 @@ export function HeroSection() {
                area: 800,
             },
             value: 40,
+            limit: 250,
          },
          opacity: {
             value: 0.5,

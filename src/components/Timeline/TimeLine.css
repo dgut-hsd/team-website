@@ -2,13 +2,11 @@
 .timeline-container {
    width: 100%;
    justify-content: flex-start;
-   min-height: 650px;
 }
 
 .timeline-container h2 {
    flex-shrink: 0;
-   margin: 0;
-   margin-top: 10px;
+   margin-top: 10px 0;
 }
 
 /* === Tablet & Up === */
@@ -20,12 +18,8 @@
 
 /* === Laptop & Up === */
 @media (min-width: 1100px) {
-   .timeline-container p {
-      font-size: 1.5rem;
-   }
-
-   .timeline-container p {
-      margin-bottom: 4rem;
+   .timeline-text {
+      margin-bottom: 3rem;
    }
 }
 
@@ -35,8 +29,7 @@
       padding: 8rem;
    }
 
-   .timeline-container p {
-      font-size: 2rem;
-      margin: 1rem;
+   .timeline-text {
+      margin-bottom: 4rem;
    }
 }
