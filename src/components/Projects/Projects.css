@@ -1,165 +1,356 @@
 /* === Base (Mobile) Styles === */
 .projects-container {
-   width: 100%;
-   position: relative;
-   padding: 2rem 1rem 5rem;
-   margin-top: 0;
-   text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 2rem 1rem 5rem;
+  margin-top: 0;
+  text-align: center;
 }
 
 .projects-container h2 {
-   margin: 10px 0 2rem;
-   font-size: 3.5rem;
+  margin: 10px 0 2rem;
+  font-size: 3.5rem;
 }
 
 .projects-wrapper {
-   width: 90%;
-   margin: 0 auto;
-   overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .projects-swiper {
-   padding-top: 10px;
-   width: 100%;
+  padding-top: 10px;
+  width: 100%;
 }
 
 .projects-swiper .swiper-wrapper {
-   align-items: stretch;
+  align-items: stretch;
 }
 
 .projects-swiper .swiper-slide {
-   height: auto;
-   display: flex;
+  height: auto;
+  display: flex;
 }
 
 .gallery-item {
-   border: 1px solid #e0e0e0;
-   border-radius: 15px;
-   display: flex;
-   flex-direction: column;
-   height: 350px;
-   background-color: #fff;
-   width: 100%;
-   flex-grow: 1;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  background-color: #fff;
+  width: 100%;
+  flex-grow: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
-   width: 100%;
-   height: 200px;
-   padding: 10px;
-   object-fit: cover;
-   cursor: pointer;
-   border-radius: 15px;
-   transition: transform 0.3s ease;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
-   transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .gallery-item .gallery-item-text {
-   font-size: 1rem;
-   margin-bottom: 5px;
-   color: black;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: black;
 }
 
 .gallery-item-body {
-   margin-bottom: 10px;
-   padding: 5px 15px;
-   overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  overflow-y: auto;
 }
 
 .gallery-item-body .gallery-item-text {
-   font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .projects-switch-btn {
-   margin-top: 10px;
-   max-height: 0;
-   display: none;
+  margin-top: 10px;
+  max-height: 0;
+  display: none;
 }
 
 .projects-prev-btn,
 .projects-next-btn {
-   border: 1px solid #007bff;
-   border-radius: 50%;
-   font-size: 1.5rem;
-   width: 50px;
-   height: 50px;
-   transition: all 0.3s ease-in-out;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 .projects-next-btn:hover,
 .projects-prev-btn:hover {
-   color: #007bff;
-   background-color: #fff;
+  color: #007bff;
+  background-color: #fff;
 }
 
 /* === Tablet & Up === */
 @media (min-width: 768px) {
-   .projects-container {
-      padding: 3rem 2rem 6rem;
-      margin-top: 0;
-   }
+  .projects-container {
+    padding: 3rem 2rem 6rem;
+    margin-top: 0;
+  }
 
-   .projects-wrapper {
-      width: 75%;
-   }
+  .projects-wrapper {
+    width: 75%;
+  }
 
-   .projects-switch-btn {
-      margin-top: 2rem;
-      max-height: none;
-      display: block;
-   }
+  .projects-switch-btn {
+    margin-top: 2rem;
+    max-height: none;
+    display: block;
+  }
 }
 
 /* === Laptop & Up === */
 @media (min-width: 1100px) {
-   .projects-wrapper {
-      width: 90%;
-   }
+  .projects-wrapper {
+    width: 90%;
+  }
 
-   .projects-switch-btn {
-      margin-top: 10px;
-   }
+  .projects-switch-btn {
+    margin-top: 10px;
+  }
 }
 
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
-   .projects-container h2 {
-      margin: 1rem 0;
-      font-size: 6rem;
-   }
+  .projects-container h2 {
+    margin: 1rem 0;
+    font-size: 6rem;
+  }
 
-   .gallery-item {
-      height: 450px;
-   }
+  .gallery-item {
+    height: 450px;
+  }
 
-   .gallery-item img {
-      height: 280px;
-   }
+  .gallery-item img {
+    height: 280px;
+  }
 
-   .gallery-item-text {
-      font-size: 1.6rem;
-      margin-top: 5px;
-   }
+  .gallery-item-text {
+    font-size: 1.6rem;
+    margin-top: 5px;
+  }
 
-   .projects-switch-btn {
-      display: flex;
-      gap: 1rem;
-   }
+  .projects-switch-btn {
+    display: flex;
+    gap: 1rem;
+  }
 
-   .projects-prev-btn,
-   .projects-next-btn {
-      font-size: 2rem;
-      width: 75px;
-      height: 75px;
-   }
+  .projects-prev-btn,
+  .projects-next-btn {
+    font-size: 2rem;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/* === Modal Styles === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 40px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  max-width: 600px;
+  max-height: 70vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.modal-header {
+  padding: 20px 20px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-images {
+  margin-bottom: 20px;
+}
+
+.modal-swiper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-swiper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-description {
+  line-height: 1.6;
+}
+
+.modal-description p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* === Modal Responsive Styles === */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 20px;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+    padding-right: 40px;
+  }
+
+  .modal-swiper img {
+    height: 200px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-content {
+    max-width: 700px;
+  }
+}
+
+/* === Gallery Item Cursor === */
+.gallery-item {
+  cursor: pointer;
+}
+/* === Body Modal Open State === */
+body.modal-open {
+  overflow: hidden;
+  padding-right: 15px; /* Compensate for scrollbar width */
+}
+
+/* For systems with different scrollbar widths */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body.modal-open {
+    padding-right: 17px; /* WebKit browsers */
+  }
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+  body.modal-open {
+    padding-right: 15px;
+  }
+}
+/* === Swiper Draggable Cursor Styles === */
+.projects-swiper {
+   cursor: grab;
+}
+
+.projects-swiper:active {
+   cursor: grabbing;
+}
+
+.projects-swiper .swiper-slide {
+   cursor: grab;
+}
+
+.projects-swiper .swiper-slide:active {
+   cursor: grabbing;
+}
+
+/* Modal Swiper Draggable Cursor */
+.modal-swiper {
+   cursor: grab;
+}
+
+.modal-swiper:active {
+   cursor: grabbing;
+}
+
+.modal-swiper .swiper-slide {
+   cursor: grab;
+}
+
+.modal-swiper .swiper-slide:active {
+   cursor: grabbing;
+}
+
+.modal-swiper .swiper-slide img {
+   cursor: grab;
+}
+
+.modal-swiper .swiper-slide img:active {
+   cursor: grabbing;
 }
