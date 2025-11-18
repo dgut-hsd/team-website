@@ -1,25 +1,57 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import './Events.css';
 import { eventImages } from '../../data/event-data';
 import { Tooltip } from 'react-tooltip';
+import { useEffect, useRef } from 'react';
+
+import 'swiper/css';
+import './Events.css';
 
 export function Events() {
-   // Split images into two arrays for two swipers
-   const firstRowImages = eventImages.slice(
-      0,
-      Math.ceil(eventImages.length / 2)
-   );
-   const secondRowImages = eventImages.slice(Math.ceil(eventImages.length / 2));
+   const mid = Math.ceil(eventImages.length / 2);
+   const firstRowImages = eventImages.slice(0, mid);
+   const secondRowImages = eventImages.slice(mid);
 
    const handleImageClick = (fullImageSrc) => {
-      // Open image in new tab or implement lightbox
       window.open(fullImageSrc, '_blank');
    };
 
+   const swiperRef1 = useRef(null);
+   const swiperRef2 = useRef(null);
+   const containerRef = useRef(null);
+
+   useEffect(() => {
+      const observer = new IntersectionObserver(
+         ([entry]) => {
+            if (entry.isIntersecting) {
+               swiperRef1.current?.swiper.autoplay.start();
+               swiperRef2.current?.swiper.autoplay.start();
+            } else {
+               swiperRef1.current?.swiper.autoplay.stop();
+               swiperRef2.current?.swiper.autoplay.stop();
+            }
+         },
+         { threshold: 0.1 }
+      );
+
+      if (containerRef.current) {
+         observer.observe(containerRef.current);
+      }
+
+      return () => {
+         if (containerRef.current) {
+            observer.unobserve(containerRef.current);
+         }
+      };
+   }, []);
+
    return (
-      <div className='events-container' id='events' data-aos='fade-up'>
+      <div
+         className='events-container'
+         id='events'
+         data-aos='fade-up'
+         ref={containerRef}
+      >
          <h2 className='text-container'>
             <span>活动</span>
             <span className='text'>剪影</span>
@@ -40,6 +72,7 @@ export function Events() {
                   disableOnInteraction: false,
                }}
                speed={8000}
+               ref={swiperRef1}
                allowTouchMove={false}
             >
                {firstRowImages.map((image, index) => (
@@ -50,18 +83,7 @@ export function Events() {
                         onClick={() => handleImageClick(image.full)}
                         data-tooltip-id='event-tooltip'
                         data-tooltip-content={image.alt}
-                     />
-                  </SwiperSlide>
-               ))}
-               {/* Duplicate slides for seamless loop */}
-               {firstRowImages.map((image, index) => (
-                  <SwiperSlide key={`row1-dup-${index}`}>
-                     <img
-                        src={image.thumb}
-                        alt={image.alt}
-                        onClick={() => handleImageClick(image.full)}
-                        data-tooltip-id='event-tooltip'
-                        data-tooltip-content={image.alt}
+                        loading='lazy'
                      />
                   </SwiperSlide>
                ))}
@@ -79,6 +101,7 @@ export function Events() {
                   reverseDirection: true,
                }}
                speed={8000}
+               ref={swiperRef2}
                allowTouchMove={false}
             >
                {secondRowImages.map((image, index) => (
@@ -89,18 +112,7 @@ export function Events() {
                         onClick={() => handleImageClick(image.full)}
                         data-tooltip-id='event-tooltip'
                         data-tooltip-content={image.alt}
-                     />
-                  </SwiperSlide>
-               ))}
-               {/* Duplicate slides for seamless loop */}
-               {secondRowImages.map((image, index) => (
-                  <SwiperSlide key={`row2-dup-${index}`}>
-                     <img
-                        src={image.thumb}
-                        alt={image.alt}
-                        onClick={() => handleImageClick(image.full)}
-                        data-tooltip-id='event-tooltip'
-                        data-tooltip-content={image.alt}
+                        loading='lazy'
                      />
                   </SwiperSlide>
                ))}

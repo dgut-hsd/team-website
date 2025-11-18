@@ -23,7 +23,7 @@
 
 .events-swiper-1 .swiper-slide,
 .events-swiper-2 .swiper-slide {
-   width: 280px !important;
+   width: 280px;
    height: 210px;
    flex-shrink: 0;
 }
@@ -65,23 +65,15 @@
    }
 }
 
-/* === Desktop & Up === */
-@media (min-width: 1440px) {
-   .events-swiper-1 .swiper-slide,
-   .events-swiper-2 .swiper-slide {
-      height: 210px;
-   }
-}
-
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
+   .events-gallery-wrapper {
+      gap: 2rem;
+   }
+
    .events-swiper-1 .swiper-slide,
    .events-swiper-2 .swiper-slide {
       width: 350px;
       height: 300px;
-   }
-
-   .events-swiper-2 .swiper-slide {
-      margin-bottom: 2rem;
    }
 }
