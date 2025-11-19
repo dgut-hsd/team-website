@@ -25,7 +25,7 @@ export default function App() {
          easing: 'linear',
          once: true,
       });
-
+   
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
 

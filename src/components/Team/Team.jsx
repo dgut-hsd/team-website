@@ -55,18 +55,12 @@ export function Team() {
             </h3>
 
             <div className='member-scroll-wrapper'>
-               <Marquee
-                  pauseOnHover={true}
-                  gradient={true}
-                  gradientWidth={50}
-                  speed={60}
-               >
+               <Marquee gradient={true} gradientWidth={50} speed={60}>
                   {firstRow.map((member, index) => (
                      <div
                         className='member-card'
                         key={index}
                         data-tooltip-id='member-tooltip'
-                        data-tooltip-content={member.detail}
                      >
                         <div className='member-img'>
                            <img src={member.img} alt={member.name} />
@@ -82,7 +76,6 @@ export function Team() {
 
             <div className='member-scroll-wrapper'>
                <Marquee
-                  pauseOnHover={true}
                   gradient={true}
                   gradientWidth={50}
                   speed={60}

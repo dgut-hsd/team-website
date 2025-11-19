@@ -1,10 +1,23 @@
+import { useEffect, useRef, useState } from 'react';
+import { eventImages } from '../../data/event-data';
+
+import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Video from 'yet-another-react-lightbox/plugins/video';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import 'yet-another-react-lightbox/styles.css';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { eventImages } from '../../data/event-data';
-import { Tooltip } from 'react-tooltip';
-import { useEffect, useRef } from 'react';
-
 import 'swiper/css';
+
+import { Tooltip } from 'react-tooltip';
+
 import './Events.css';
 
 export function Events() {
@@ -12,9 +25,9 @@ export function Events() {
    const firstRowImages = eventImages.slice(0, mid);
    const secondRowImages = eventImages.slice(mid);
 
-   const handleImageClick = (fullImageSrc) => {
-      window.open(fullImageSrc, '_blank');
-   };
+   const [lightboxIdx, setLightboxIdx] = useState(-1);
+
+   const slides = eventImages.map((img) => ({ src: img.full, alt: img.alt }));
 
    const swiperRef1 = useRef(null);
    const swiperRef2 = useRef(null);
@@ -80,7 +93,7 @@ export function Events() {
                      <img
                         src={image.thumb}
                         alt={image.alt}
-                        onClick={() => handleImageClick(image.full)}
+                        onClick={() => setLightboxIdx(index)}
                         data-tooltip-id='event-tooltip'
                         data-tooltip-content={image.alt}
                         loading='lazy'
@@ -109,7 +122,7 @@ export function Events() {
                      <img
                         src={image.thumb}
                         alt={image.alt}
-                        onClick={() => handleImageClick(image.full)}
+                        onClick={() => setLightboxIdx(mid + index)}
                         data-tooltip-id='event-tooltip'
                         data-tooltip-content={image.alt}
                         loading='lazy'
@@ -123,6 +136,14 @@ export function Events() {
             id='event-tooltip'
             className='custom-tooltip'
             style={{ zIndex: 1000 }}
+         />
+
+         <Lightbox
+            open={lightboxIdx >= 0}
+            index={lightboxIdx}
+            close={() => setLightboxIdx(-1)}
+            slides={slides}
+            plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
          />
       </div>
    );

@@ -1,267 +1,274 @@
 /* === Base (Mobile) Styles === */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.2rem;
-  border-bottom: 1px solid #e0e0e0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: #fff;
-  transition: all 0.4s ease-in-out;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 1.2rem;
+   border-bottom: 1px solid #e0e0e0;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   width: 100%;
+   background-color: #fff;
+   transition: all 0.4s ease-in-out;
 }
 
 header.sticky {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header a {
-  text-decoration: none;
+   text-decoration: none;
 }
 
 .icon {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(
-    to right,
-    #007bff 0%,
-    #4aa4ff 50%,
-    #007bff 100%
-  );
-  background-size: 200% auto;
-  animation: text-gradient-animation 2s ease-in-out infinite alternate;
-  font-size: 2rem;
-  font-weight: 700;
-  display: inline-block;
-  transition: text-shadow 0.3s ease-in-out;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   background-image: linear-gradient(
+      to right,
+      #007bff 0%,
+      #4aa4ff 50%,
+      #007bff 100%
+   );
+   background-size: 200% auto;
+   animation: text-gradient-animation 2s ease-in-out infinite alternate;
+   font-size: 2rem;
+   font-weight: 700;
+   display: inline-block;
+   transition: text-shadow 0.3s ease-in-out;
 }
 
 .icon:hover {
-  text-shadow: 0 0 3px #47a0ff;
+   text-shadow: 0 0 3px #47a0ff;
 }
 
 .menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  max-height: 0;
-  padding: 0;
-  opacity: 0;
-  pointer-events: none;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  list-style: none;
-  margin: 5px 0;
-  display: flex;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   right: 0;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   background-color: rgba(255, 255, 255, 0.8);
+   backdrop-filter: blur(12px);
+   max-height: 0;
+   padding: 0;
+   opacity: 0;
+   pointer-events: none;
+   overflow: hidden;
+   transition: all 0.4s ease;
+   list-style: none;
+   margin: 5px 0;
+   display: flex;
 }
 
 .menu li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  border-bottom: 1px solid #e0e0e0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 90%;
+   border-bottom: 1px solid #e0e0e0;
 }
 
 .menu-toggle {
-  display: none;
-  max-width: 0;
+   display: none;
+   max-width: 0;
 }
 
 .hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  width: clamp(40px, 6vw, 45px);
-  height: clamp(40px, 6vw, 45px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 12px;
+   width: clamp(40px, 6vw, 45px);
+   height: clamp(40px, 6vw, 45px);
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   background: rgba(255, 255, 255, 0.06);
+   cursor: pointer;
 }
 
 .hamburger span,
 .hamburger span::before,
 .hamburger span::after {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: #007bff;
-  position: relative;
-  content: "";
-  transition: all 0.25s ease;
-  transform-origin: center;
+   display: block;
+   width: 18px;
+   height: 2px;
+   background-color: #007bff;
+   position: relative;
+   content: '';
+   transition: all 0.25s ease;
+   transform-origin: center;
 }
 
 .hamburger span::before {
-  position: absolute;
-  top: -6px;
+   position: absolute;
+   top: -6px;
 }
 
 .hamburger span::after {
-  position: absolute;
-  top: 6px;
+   position: absolute;
+   top: 6px;
 }
 
 .nav-links {
-  color: #5a5a5a;
-  transition: all 0.3s ease-in-out;
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding: 10px 0;
+   color: #5a5a5a;
+   transition: all 0.3s ease-in-out;
+   font-weight: 500;
+   font-size: 1.5rem;
+   padding: 10px 0;
 }
 
 .nav-links:hover,
 .nav-links:active,
 .nav-links:focus {
-  color: #007bff;
-  box-shadow: 0 2px 0 #007bff;
+   color: #007bff;
+   box-shadow: 0 2px 0 #007bff;
 }
 
 .nav-join-link {
-  background-color: #007bff;
-  color: white;
-  border: 1px solid #007bff;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  line-height: 1.6;
-  display: none;
-  max-width: 0;
-  max-height: 0;
-  visibility: hidden;
+   background-color: #007bff;
+   color: white;
+   border: 1px solid #007bff;
+   white-space: nowrap;
+   padding: 0.5rem 1rem;
+   border-radius: 15px;
+   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+   line-height: 1.6;
+   display: none;
+   max-width: 0;
+   max-height: 0;
+   visibility: hidden;
 }
 
 .nav-join-link:hover,
 .nav-join-link:focus {
-  color: #007bff;
-  background-color: #fff;
-  outline: none;
+   color: #007bff;
+   background-color: #fff;
+   outline: none;
 }
 
 .menu-toggle:checked ~ .menu {
-  max-height: 100vh;
-  padding: 1.5rem 0;
-  opacity: 1;
-  pointer-events: auto;
+   max-height: 100vh;
+   padding: 1.5rem 0;
+   opacity: 1;
+   pointer-events: auto;
 }
 
 .menu-toggle:checked ~ .hamburger span {
-  background: transparent;
+   background: transparent;
 }
 
 .menu-toggle:checked ~ .hamburger span::before {
-  top: 0;
-  transform: rotate(45deg);
+   top: 0;
+   transform: rotate(45deg);
 }
 
 .menu-toggle:checked ~ .hamburger span::after {
-  top: 0;
-  transform: rotate(-45deg);
+   top: 0;
+   transform: rotate(-45deg);
 }
 
 @keyframes text-gradient-animation {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
+   from {
+      background-position: 0% 50%;
+   }
+   to {
+      background-position: 100% 50%;
+   }
 }
 
 /* === Tablet & Up === */
 @media (min-width: 768px) {
-  header {
-    justify-content: space-around;
-    padding: 1rem;
-  }
+   header {
+      justify-content: space-around;
+      padding: 1rem;
+   }
 
-  .menu {
-    position: static;
-    flex-direction: row;
-    background-color: transparent;
-    backdrop-filter: none;
-    max-height: none;
-    padding: 0;
-    opacity: 1;
-    pointer-events: auto;
-    overflow: visible;
-    gap: 1.2rem;
-    justify-content: center;
-  }
+   .menu {
+      position: static;
+      flex-direction: row;
+      background-color: transparent;
+      backdrop-filter: none;
+      max-height: none;
+      padding: 0;
+      opacity: 1;
+      pointer-events: auto;
+      overflow: visible;
+      gap: 1.2rem;
+      justify-content: center;
+   }
 
-  .menu li {
-    width: auto;
-    border-bottom: none;
-  }
+   .menu li {
+      width: auto;
+      border-bottom: none;
+   }
 
-  .hamburger {
-    display: none;
-  }
+   .hamburger {
+      display: none;
+   }
 
-  .nav-links {
-    font-size: 1.1rem;
-    padding: 0;
-  }
+   .nav-links {
+      font-size: 1.1rem;
+      padding: 0;
+   }
 
-  .nav-join-link {
-    display: block;
-    max-width: none;
-    max-height: none;
-    visibility: visible;
-  }
+   .nav-join-link {
+      display: block;
+      max-width: none;
+      max-height: none;
+      visibility: visible;
+   }
 }
 
 /* === Laptop & Up === */
 @media (min-width: 1100px) {
-  .icon {
-    font-size: 1.8rem;
-  }
+   .header {
+      padding: 0.8rem 1.2rem;
+   }
 
-  .menu {
-    gap: 1.5rem;
-  }
+   .icon {
+      font-size: 1.5rem;
+   }
 
-  .nav-links {
-    font-size: 1.2rem;
-  }
+   .menu {
+      gap: 1.2rem;
+   }
+
+   .nav-links {
+      font-size: 1rem;
+   }
+
+   .nav-join-link {
+      font-size: 0.8rem;
+   }
 }
 
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
-  header {
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
-  }
+   .header {
+      padding: 0.8rem 2rem;
+   }
 
-  .icon {
-    font-size: 3rem;
-    margin-left: 1.5rem;
-  }
+   .icon {
+      font-size: 2.4rem;
+      margin-left: 2rem;
+   }
 
-  .menu {
-    gap: 2rem;
-  }
+   .menu {
+      gap: 1.8rem;
+   }
 
-  .nav-links {
-    padding: 1rem 0;
-    font-size: 1.8rem;
-  }
+   .nav-links {
+      padding: 1rem 0;
+      font-size: 1.4rem;
+   }
 
-  .nav-join-link {
-    margin-right: 2rem;
-    padding: 0.6rem 1.5rem;
-    font-size: 1.5rem;
-  }
+   .nav-join-link {
+      margin-right: 2rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1.2rem;
+   }
 }

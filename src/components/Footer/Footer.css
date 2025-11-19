@@ -110,15 +110,15 @@
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
    .footer h3 {
-      font-size: 3rem;
+      font-size: 2rem;
    }
 
    .footer p {
-      font-size: 2rem;
+      font-size: 1.5rem;
    }
 
    .footer-copyright .copyright-text {
       font-size: 1.5rem;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
    }
 }

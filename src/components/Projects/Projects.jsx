@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Autoplay } from 'swiper/modules';
 import { projectsData } from '../../data/projects-data';
 
 import 'swiper/css/scrollbar';
@@ -35,9 +35,12 @@ export function Projects() {
             <div className='projects-wrapper'>
                <Swiper
                   scrollbar={{
-                     hide: true,
+                     draggable: true,
                   }}
-                  modules={[Scrollbar]}
+                  modules={[Scrollbar, Autoplay]}
+                  autoplay={{
+                     delay: 3500,
+                  }}
                   spaceBetween={15}
                   slidesPerView={1}
                   loop={projectsData.length > 1}
@@ -49,7 +52,10 @@ export function Projects() {
                >
                   {projectsData.map((item, index) => (
                      <SwiperSlide key={index}>
-                        <div className='gallery-item' onClick={() => openModal(item)}>
+                        <div
+                           className='gallery-item'
+                           onClick={() => openModal(item)}
+                        >
                            <img src={item.img} alt={item.name} />
                            <div className='gallery-item-body'>
                               <h3 className='gallery-item-text'>{item.name}</h3>
@@ -61,42 +67,55 @@ export function Projects() {
             </div>
          </div>
 
-         {/* Global Modal using Portal */}
-         {isModalOpen && selectedProject && createPortal(
-            <div className='modal-overlay' onClick={closeModal}>
-               <div className='modal-content' onClick={(e) => e.stopPropagation()}>
-                  <button className='modal-close' onClick={closeModal}>
-                     ×
-                  </button>
-                  
-                  <div className='modal-header'>
-                     <h2>{selectedProject.name}</h2>
-                  </div>
+         {isModalOpen &&
+            selectedProject &&
+            createPortal(
+               <div className='modal-overlay' onClick={closeModal}>
+                  <div
+                     className='modal-content'
+                     onClick={(e) => e.stopPropagation()}
+                  >
+                     <button className='modal-close' onClick={closeModal}>
+                        ×
+                     </button>
 
-                  <div className='modal-body'>
-                     <div className='modal-images'>
-                        <Swiper
-                           spaceBetween={10}
-                           slidesPerView={1}
-                           loop={selectedProject.images.length > 1}
-                           className='modal-swiper'
-                        >
-                           {selectedProject.images.map((image, index) => (
-                              <SwiperSlide key={index}>
-                                 <img src={image} alt={`${selectedProject.name} ${index + 1}`} />
-                              </SwiperSlide>
-                           ))}
-                        </Swiper>
+                     <div className='modal-header'>
+                        <h2>{selectedProject.name}</h2>
                      </div>
-                     
-                     <div className='modal-description'>
-                        <p>{selectedProject.detailedDescription}</p>
+
+                     <div className='modal-body'>
+                        <div className='modal-images'>
+                           <Swiper
+                              spaceBetween={10}
+                              slidesPerView={1}
+                              loop={selectedProject.images.length > 1}
+                              modules={[Autoplay]}
+                              autoplay={{
+                                 delay: 2500,
+                              }}
+                              className='modal-swiper'
+                           >
+                              {selectedProject.images.map((image, index) => (
+                                 <SwiperSlide key={index}>
+                                    <img
+                                       src={image}
+                                       alt={`${selectedProject.name} ${
+                                          index + 1
+                                       }`}
+                                    />
+                                 </SwiperSlide>
+                              ))}
+                           </Swiper>
+                        </div>
+
+                        <div className='modal-description'>
+                           <p>{selectedProject.detailedDescription}</p>
+                        </div>
                      </div>
                   </div>
-               </div>
-            </div>,
-            document.body
-         )}
+               </div>,
+               document.body
+            )}
       </>
    );
 }
