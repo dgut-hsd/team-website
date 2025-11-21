@@ -13,7 +13,7 @@ import './TimeLine.css';
 const TimelineHeader = styled(Typography)(({ theme }) => ({
    fontWeight: '500',
    color: '#1F2937',
-   fontSize: '1rem',
+   fontSize: '1.1rem',
    [theme.breakpoints.up('md')]: {
       fontSize: '1rem',
    },
@@ -28,6 +28,7 @@ const TimelineHeader = styled(Typography)(({ theme }) => ({
 const TimelineText = styled(Typography)(({ theme }) => ({
    color: '#6B7280',
    fontSize: '0.9rem !important',
+   lineHeight: '1.5',
    [theme.breakpoints.up('md')]: {
       fontSize: '0.9rem !important',
    },
@@ -58,13 +59,22 @@ export function TimeLine() {
          <Timeline
             position='right'
             sx={{
-               minHeight: '65vh',
-               overflowY: 'hidden',
-               padding: '6px 16px',
+               padding: '0',
+               mt: '1rem',
                width: '100%',
-               marginLeft: {
-                  xs: 0,
-                  sm: '-25rem',
+               [`& .${timelineItemClasses.root}:before`]: {
+                  flex: 0,
+                  padding: 0,
+               },
+               '@media (min-width: 600px)': {
+                  mt: '0.5rem',
+                  minHeight: '65vh',
+                  marginLeft: '-25rem',
+                  maxWidth: '1400px',
+                  [`& .${timelineItemClasses.root}:before`]: {
+                     flex: 1,
+                     padding: '6px 16px',
+                  },
                },
                maxWidth: {
                   xs: '100%',

@@ -7,15 +7,17 @@
 
 .teacher-header,
 .member-header {
-   font-size: 2.5rem;
+   font-size: clamp(1.5rem, 5vw, 2rem);
    text-align: center;
+   margin-bottom: 1rem;
 }
 
 .teacher-card-container {
    margin-top: 1rem;
    display: flex;
    justify-content: center;
-   gap: 2rem;
+   flex-direction: column;
+   gap: 1.5rem;
    padding: 0 1rem;
    width: 100%;
 }
@@ -23,7 +25,7 @@
 .teacher-card {
    display: flex;
    padding: 1rem;
-   background-color: #b1b1b197;
+   background-color: #f5f5f5;
    border-radius: 15px;
    gap: 1rem;
    align-items: center;
@@ -39,8 +41,8 @@
 }
 
 .teacher-img {
-   width: 100px;
-   height: 100px;
+   width: 80px;
+   height: 80px;
    flex-shrink: 0;
 }
 
@@ -54,20 +56,22 @@
 .teacher-info-container {
    display: flex;
    flex-direction: column;
+   text-align: left;
 }
 
 .teacher-name {
-   font-size: 1.4rem;
+   font-size: 1.2rem;
 }
 
 .teacher-title {
-   font-size: 1rem;
+   font-size: 0.9rem;
    color: #5a5a5a;
-   margin-bottom: 1rem;
+   margin: 0.5rem 0;
 }
 
 .teacher-detail {
-   font-size: 1.2rem;
+   font-size: 0.9rem;
+   line-height: 1.4;
 }
 
 .member-container {
@@ -84,12 +88,12 @@
 
 .member-card {
    display: flex;
-   align-items: flex-start;
+   align-items: center;
    flex-shrink: 0;
-   width: 240px;
-   margin: 0 12px;
-   height: 90px;
-   background-color: #b1b1b197;
+   width: 200px;
+   margin: 0 8px;
+   height: 70px;
+   background-color: #f5f5f5;
    border-radius: 15px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    padding: 0.5rem;
@@ -114,22 +118,48 @@
    display: flex;
    flex-direction: column;
    gap: 5px;
+   overflow: hidden;
 }
 
 .member-name {
-   font-size: 1rem;
+   font-size: 0.9rem;
 }
 
 .member-title {
-   font-size: 0.8rem;
+   font-size: 0.75rem;
    color: #393939;
 }
 
 /* === Tablet & Up === */
 @media (min-width: 768px) {
+   .teacher-card-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .teacher-name {
+      font-size: 1.4rem;
+   }
+   .teacher-title {
+      font-size: 1rem;
+   }
+   .teacher-detail {
+      font-size: 1.2rem;
+   }
+
    .member-card {
       width: 260px;
+      height: 90px;
       margin: 0 14px;
+   }
+
+   .member-name {
+      font-size: 1rem;
+   }
+
+   .member-title {
+      font-size: 0.8rem;
    }
 }
 
@@ -152,7 +182,6 @@
    .teacher-img {
       width: 120px;
       height: 120px;
-      flex-shrink: 0;
    }
 
    .teacher-name {

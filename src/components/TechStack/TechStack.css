@@ -1,92 +1,113 @@
 /* === Base (Mobile) Styles === */
 .tech-stack-container {
-  background-color: #fff;
-  width: 100%;
+   background-color: #fff;
+   width: 100%;
+   overflow: hidden;
 }
 
 .tech-stack-container h2 {
-  margin: 10px 0;
+   margin: 10px 0;
+}
+
+.tech-stack-container p {
+   text-align: center;
 }
 
 .tech-pics-wrapper {
-  margin: 20px 0;
-  flex-grow: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+   margin: 20px 0;
+   flex-grow: 1;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
 }
 
 .tech-scroller {
-  max-width: 95vw;
-  overflow: hidden;
-  mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
-  margin: 1rem 0;
+   max-width: 95vw;
+   overflow: hidden;
+   mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      white 10%,
+      white 90%,
+      transparent 100%
+   );
+   -webkit-mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      white 10%,
+      white 90%,
+      transparent 100%
+   );
+   margin: 1rem 0;
 }
 
 .tech-list {
-  padding-left: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll 25s linear infinite;
+   padding-left: 0;
+   margin: 0;
+   list-style: none;
+   display: flex;
+   gap: 1.5rem;
+   width: max-content;
+   flex-wrap: nowrap;
+   animation: scroll 30s linear infinite;
 }
 
-.tech-scroller[data-direction="right"] .tech-list {
-  animation-direction: reverse;
+.tech-scroller[data-direction='right'] .tech-list {
+   animation-direction: reverse;
 }
 
 .tech-list li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .tech-list img {
-  height: 80px;
-  width: auto;
-  max-width: none;
+   height: 50px;
+   width: auto;
 }
 
 @keyframes scroll {
-  to {
-    transform: translate(-50%);
-  }
+   to {
+      transform: translate(-50%);
+   }
 }
 
 /* === Tablet & Up === */
 @media (min-width: 768px) {
-  .tech-stack-container p {
-    text-align: left;
-  }
+   .tech-scroller {
+      max-width: 80vw;
+      margin: 0 auto;
+   }
 
-  .tech-scroller {
-    max-width: 80vw;
-  }
+   .tech-list {
+      gap: 2rem;
+      animation: scroll 40s linear infinite;
+   }
 
-  .tech-list {
-    animation: scroll 40s linear infinite;
-  }
-}
+   .tech-list img {
+      height: 80px;
+   }
 
-/* === Laptop & Up === */
-@media (min-width: 1100px) {
+   .tech-pics-wrapper {
+      gap: 1rem;
+   }
 }
 
 /* === Large Desktop & Up === */
 @media (min-width: 1920px) {
-  .tech-stack-container h2 {
-    font-size: 6rem;
-  }
+   .tech-stack-container h2 {
+      font-size: 6rem;
+   }
 
-  .tech-list img {
-    height: 120px;
-    margin: 1.5rem 0;
-    width: auto;
-    max-width: none;
-  }
+   .tech-pics-wrapper {
+      gap: 1.5rem;
+   }
+
+   .tech-list img {
+      height: 120px;
+      margin: 1.5rem 0;
+   }
 }

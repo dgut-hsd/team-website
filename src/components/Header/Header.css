@@ -78,13 +78,28 @@ header a {
    max-width: 0;
 }
 
+.nav-links {
+   color: #5a5a5a;
+   transition: all 0.3s ease-in-out;
+   font-weight: 500;
+   font-size: 1.5rem;
+   padding: 10px 0;
+}
+
+.nav-links:hover,
+.nav-links:active,
+.nav-links:focus {
+   color: #007bff;
+   box-shadow: 0 2px 0 #007bff;
+}
+
 .hamburger {
    display: flex;
    align-items: center;
    justify-content: center;
    border-radius: 12px;
-   width: clamp(40px, 6vw, 45px);
-   height: clamp(40px, 6vw, 45px);
+   width: 44px;
+   height: 44px;
    border: 1px solid rgba(255, 255, 255, 0.12);
    background: rgba(255, 255, 255, 0.06);
    cursor: pointer;
@@ -94,7 +109,7 @@ header a {
 .hamburger span::before,
 .hamburger span::after {
    display: block;
-   width: 18px;
+   width: 24px;
    height: 2px;
    background-color: #007bff;
    position: relative;
@@ -111,21 +126,6 @@ header a {
 .hamburger span::after {
    position: absolute;
    top: 6px;
-}
-
-.nav-links {
-   color: #5a5a5a;
-   transition: all 0.3s ease-in-out;
-   font-weight: 500;
-   font-size: 1.5rem;
-   padding: 10px 0;
-}
-
-.nav-links:hover,
-.nav-links:active,
-.nav-links:focus {
-   color: #007bff;
-   box-shadow: 0 2px 0 #007bff;
 }
 
 .nav-join-link {
@@ -152,7 +152,6 @@ header a {
 
 .menu-toggle:checked ~ .menu {
    max-height: 100vh;
-   padding: 1.5rem 0;
    opacity: 1;
    pointer-events: auto;
 }
@@ -169,6 +168,12 @@ header a {
 .menu-toggle:checked ~ .hamburger span::after {
    top: 0;
    transform: rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+   .nav-join-link {
+      display: none;
+   }
 }
 
 @keyframes text-gradient-animation {

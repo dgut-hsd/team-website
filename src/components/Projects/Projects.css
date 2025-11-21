@@ -2,18 +2,19 @@
 .projects-container {
    width: 100%;
    position: relative;
-   padding: 2rem 1rem 5rem;
+   padding: 2rem 0 5rem;
    margin-top: 0;
    text-align: center;
 }
 
 .projects-container h2 {
    margin: 10px 0 2rem;
-   font-size: 3.5rem;
+   font-size: clamp(2.5rem, 8vw, 3.5rem);
 }
 
 .projects-wrapper {
    width: 90%;
+   padding: 0 10px;
    margin: 0 auto;
    overflow: hidden;
 }
@@ -30,6 +31,7 @@
 .projects-swiper .swiper-slide {
    height: auto;
    display: flex;
+   justify-content: center;
 }
 
 .gallery-item {
@@ -37,7 +39,8 @@
    border-radius: 15px;
    display: flex;
    flex-direction: column;
-   height: 250px;
+   height: auto;
+   min-height: 240px;
    background-color: #fff;
    width: 100%;
    flex-grow: 1;
@@ -84,11 +87,11 @@
 @media (min-width: 768px) {
    .projects-container {
       padding: 3rem 2rem 6rem;
-      margin-top: 0;
    }
 
    .projects-wrapper {
       width: 75%;
+      padding: 0;
    }
 }
 

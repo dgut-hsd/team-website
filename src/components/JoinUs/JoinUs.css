@@ -7,11 +7,15 @@
 .join-container h2 {
    margin: 10px 0;
    font-size: 3.2rem;
-   white-space: nowrap;
 }
 
 .join-container .text {
    font-size: 3.2rem;
+}
+
+.join-container p {
+   max-width: 90%;
+   text-align: center;
 }
 
 .join-us-link {
@@ -25,7 +29,7 @@
    border-radius: 25px;
    box-shadow: 0 4px 8px rgb(139 92 246 / 0.3);
    margin-top: 2rem;
-   font-size: 2rem;
+   font-size: 1.1rem;
 }
 
 .join-us-link:hover {
@@ -37,8 +41,12 @@
 /* === Tablet & Up === */
 @media (min-width: 768px) {
    .join-container h2 {
-      white-space: normal;
+      white-space: nowrap;
       padding: 0;
+   }
+
+   .join-us-link {
+      font-size: 1.2rem;
    }
 }
 
@@ -50,11 +58,6 @@
 
    .join-container .text {
       font-size: 4rem;
-   }
-
-   .join-us-link {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
    }
 }
 

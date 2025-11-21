@@ -7,7 +7,7 @@
    width: 100%;
    height: 95vh;
    position: relative;
-   padding: 4rem 0;
+   padding: 2rem;
 }
 
 /* sparkles */
@@ -37,13 +37,13 @@
    height: 100%;
    background-color: #f0f4f8;
    mask-image: radial-gradient(
-      ellipse 70% 70% at 50% 50%,
-      transparent 40%,
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
       white
    );
    -webkit-mask-image: radial-gradient(
-      ellipse 70% 70% at 50% 50%,
-      transparent 40%,
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
       white
    );
    z-index: 2;
@@ -56,17 +56,25 @@
    flex-direction: column;
    align-items: center;
    z-index: 3;
-   gap: 0.5rem;
+   gap: 1rem;
+   text-align: center;
 }
 
-.hero-content span {
-   font-size: 2rem;
+.hero-content h1.text-container span {
+   font-size: clamp(2.5rem, 10vw, 4rem);
+   line-height: 1.1;
+}
+
+.hero-content p {
+   font-size: 1rem;
+   padding: 0 1rem;
+   max-width: 600px;
 }
 
 .hero-join-link {
    margin: 10px 0;
    border-radius: 15px;
-   padding: 0.6rem 1rem;
+   padding: 0.8rem 2rem;
    font-size: 1rem;
    cursor: pointer;
    text-decoration: none;
@@ -80,6 +88,21 @@
 .hero-join-link:hover {
    color: #007bff;
    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+   .radial-gradient-mask {
+      mask-image: radial-gradient(
+         ellipse 70% 70% at 50% 50%,
+         transparent 40%,
+         white
+      );
+      -webkit-mask-image: radial-gradient(
+         ellipse 70% 70% at 50% 50%,
+         transparent 40%,
+         white
+      );
+   }
 }
 
 /* === Laptop & Up === */

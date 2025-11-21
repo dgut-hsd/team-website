@@ -1,7 +1,6 @@
 /* === Base (Mobile) Styles === */
 .timeline-container {
    width: 100%;
-   justify-content: flex-start;
 }
 
 .timeline-container h2 {

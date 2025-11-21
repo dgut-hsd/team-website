@@ -84,7 +84,12 @@ export function Events() {
                   delay: 0,
                   disableOnInteraction: false,
                }}
-               speed={8000}
+               speed={3000}
+               breakpoints={{
+                  768: {
+                     speed: 8000,
+                  },
+               }}
                ref={swiperRef1}
                allowTouchMove={false}
             >
@@ -113,7 +118,12 @@ export function Events() {
                   disableOnInteraction: false,
                   reverseDirection: true,
                }}
-               speed={8000}
+               speed={3000}
+               breakpoints={{
+                  768: {
+                     speed: 8000,
+                  },
+               }}
                ref={swiperRef2}
                allowTouchMove={false}
             >
