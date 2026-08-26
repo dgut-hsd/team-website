@@ -42,11 +42,11 @@ export function Header() {
             <li className={`nav-dropdown ${isAboutOpen ? 'is-open' : ''}`}>
                <button type='button' className={`nav-links nav-dropdown__trigger ${activeNav === 'about' ? 'is-active' : ''}`} onClick={() => setIsAboutOpen((open) => !open)}>关于 <span className='nav-dropdown__chevron' aria-hidden='true'></span></button>
                <div className='nav-dropdown__menu'>
-                  <a href='#about-us' className='nav-dropdown__link'>About</a>
+                  <a href='#about-us' className='nav-dropdown__link'>关于我们</a>
                   <a href='/about/messages' className='nav-dropdown__link'>消息</a>
-                  <a href='#tech-stack' className='nav-dropdown__link'>技术</a>
+                  <a href='#tech-stack' className='nav-dropdown__link'>技能库</a>
                   <a href='#honors' className='nav-dropdown__link'>荣誉</a>
-                  <a href='#events' className='nav-dropdown__link'>Life at HSD</a>
+                  <a href='#events' className='nav-dropdown__link'>HSD生活</a>
                </div>
             </li>
             <li><a href='https://github.com/dgut-hsd' className='nav-links' target='_blank' rel='noreferrer'>GitHub ↗</a></li>
