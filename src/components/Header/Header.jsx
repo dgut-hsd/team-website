@@ -16,7 +16,7 @@ export function Header() {
          <ul className='menu'>
             <li><a href='#team' className='nav-links'>成员</a></li>
             <li><a href='#projects' className='nav-links'>项目</a></li>
-            <li><a href='#timeline' className='nav-links'>工程笔记</a></li>
+            <li><a href='/about/messages' className='nav-links'>工程笔记</a></li>
             <li className={`nav-dropdown ${isAboutOpen ? 'is-open' : ''}`}>
                <button type='button' className='nav-links nav-dropdown__trigger' onClick={() => setIsAboutOpen((open) => !open)}>关于 <span className='nav-dropdown__chevron' aria-hidden='true'></span></button>
                <div className='nav-dropdown__menu'>
