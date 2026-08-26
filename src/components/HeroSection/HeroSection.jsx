@@ -18,7 +18,7 @@ export function HeroSection() {
                      我们通过构建真实系统理解计算，并探索新的可能。
                   </p>
 
-                  <a className='hero-explore' href='#projects'>
+                  <a className='hero-explore' href='/projects'>
                      <span>查看项目</span>
                      <span className='hero-explore__arrow' aria-hidden='true'>
                         ↓
@@ -29,12 +29,6 @@ export function HeroSection() {
                <div className='hero-art' aria-hidden='true'>
                   <img src={heroAbstract} alt='' />
                </div>
-            </div>
-
-            <div className='hero-index' aria-label='HSD 研究方向'>
-               <span>01 / AI SYSTEMS</span>
-               <span>02 / SYSTEMS SOFTWARE</span>
-               <span>03 / ARCHITECTURE</span>
             </div>
          </div>
       </section>
