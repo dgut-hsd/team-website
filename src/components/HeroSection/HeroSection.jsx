@@ -8,8 +8,8 @@ export function HeroSection() {
             <div className='hero-grid'>
                <div className='hero-copy'>
                   <h1 className='hero-title'>
-                     <span>从软件系统，</span>
-                     <span>到人工智能。</span>
+                     <span>从软件系统<span className='hero-title__punct'>，</span></span>
+                     <span>到人工智能<span className='hero-title__punct'>。</span></span>
                   </h1>
 
                   <p className='hero-description'>
