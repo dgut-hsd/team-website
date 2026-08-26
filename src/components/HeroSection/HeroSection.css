@@ -280,3 +280,19 @@
       transform: none;
    }
 }
+
+/* Slightly compress the desktop hero so the first project becomes a scroll cue. */
+@media (min-width: 901px) {
+   .hero-grid {
+      padding-top: clamp(3rem, 7vh, 5rem);
+   }
+   .hero-description {
+      margin-top: clamp(2rem, 4vh, 3.25rem);
+   }
+   .hero-explore {
+      margin-top: var(--space-6);
+   }
+   .hero-art {
+      top: clamp(3rem, 7vh, 5rem);
+   }
+}
