@@ -28,7 +28,7 @@ export function Header() {
                   <a href='#events' className='nav-dropdown__link'>Life at HSD</a>
                </div>
             </li>
-            <li><a href='https://github.com/HSD-DGUT' className='nav-links' target='_blank' rel='noreferrer'>GitHub ↗</a></li>
+            <li><a href='https://github.com/dgut-hsd' className='nav-links' target='_blank' rel='noreferrer'>GitHub ↗</a></li>
          </ul>
 
          <a href='#join' className='nav-join-link'>加入我们</a>
