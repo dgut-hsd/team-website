@@ -448,3 +448,16 @@ body.modal-open {
    padding-left: var(--layout-gutter);
    padding-right: var(--layout-gutter);
 }
+
+/* Featured work starts directly after the hero CTA. */
+.projects-container:not(.projects-container--grid) {
+   padding-top: 1rem;
+}
+.projects-container:not(.projects-container--grid) .project-row {
+   grid-template-columns: 3rem minmax(0, 1fr) minmax(240px, 36%);
+}
+@media (max-width: 767px) {
+   .projects-container:not(.projects-container--grid) {
+      padding-top: 1rem;
+   }
+}
