@@ -31,7 +31,7 @@ header a {
    background-image: none;
    animation: none;
    font-family: var(--font-mono);
-   font-size: 0.72rem;
+   font-size: 0.9rem;
    font-weight: var(--weight-medium);
    letter-spacing: 0.06em;
    text-transform: uppercase;
@@ -137,6 +137,7 @@ header a {
    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
    line-height: 1.6;
    display: none;
+   margin-left: 2rem;
    max-width: 0;
    max-height: 0;
    visibility: hidden;
@@ -244,7 +245,7 @@ header a {
    }
 
    .icon {
-      font-size: 0.72rem;
+      font-size: 0.9rem;
    }
 
    .menu {
@@ -267,7 +268,7 @@ header a {
    }
 
    .icon {
-      font-size: 0.82rem;
+      font-size: 0.95rem;
       margin-left: 2rem;
    }
 
