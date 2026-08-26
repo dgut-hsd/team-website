@@ -9,3 +9,13 @@
 .engineering-article__body { padding-top: clamp(3rem, 7vw, 6rem); }
 .engineering-article__body p { max-width: 42rem; margin: 0 0 1.65rem; color: var(--text-secondary); font-size: clamp(1rem, 1.25vw, 1.125rem); line-height: 1.9; text-align: left; }
 @media (max-width: 767px) { .engineering-notes-page__main { width: calc(100% - 2rem); padding: 3.5rem 0 5rem; } .engineering-article__header { padding-bottom: 2.5rem; } .engineering-article h1 { font-size: clamp(2.4rem, 12vw, 4rem); } .engineering-article__dek { margin-top: 1.25rem; font-size: 1rem; } .engineering-article__body { padding-top: 2.5rem; } .engineering-article__body p { margin-bottom: 1.35rem; font-size: 1rem; line-height: 1.85; } }
+/* Article titles are editorial headings, not hero headlines. */
+.engineering-article h1 {
+   font-size: clamp(2.25rem, 4.2vw, 4.5rem);
+   line-height: 1.08;
+}
+@media (max-width: 767px) {
+   .engineering-article h1 {
+      font-size: clamp(2rem, 9vw, 3rem);
+   }
+}
