@@ -271,3 +271,12 @@
 @media (min-width: 901px) {
    .hero-art { top: -1rem; transform: none; }
 }
+
+/* Desktop artwork aligns to the hero title baseline rather than the viewport top. */
+@media (min-width: 901px) {
+   .hero-art {
+      top: clamp(4rem, 10vh, 7rem);
+      right: clamp(1rem, 3vw, 2.5rem);
+      transform: none;
+   }
+}
