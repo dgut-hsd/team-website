@@ -2,7 +2,7 @@
 import aiProposalImg from '../assets/projects/AI标书/插图.png';
 import aiEducationImg from '../assets/projects/AI教育/插图.png';
 // 像素匠
-import pixelCraftImg1 from "../assets/projects/像素匠/像素匠_01.png";
+import pixelCraftIllustration from "../assets/projects/像素匠/插图.png";
 import pixelCraftImg2 from "../assets/projects/像素匠/像素匠_02.png";
 import pixelCraftImg3 from "../assets/projects/像素匠/像素匠_03.png";
 import pixelCraftImg4 from "../assets/projects/像素匠/像素匠_04.png";
@@ -53,9 +53,9 @@ export const projectsData = [
     detailedDescription: 'AI教育探索面向真实教学场景的智能辅助工具，让学习过程更清晰、更可追踪。',
   },  {
     name: "像素匠",
-    img: pixelCraftImg1,
+    img: pixelCraftIllustration,
     images: [
-      pixelCraftImg1,
+      pixelCraftIllustration,
       pixelCraftImg2,
       pixelCraftImg3,
       pixelCraftImg4,

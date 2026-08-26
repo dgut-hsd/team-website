@@ -58,6 +58,7 @@ export function Projects({ gridView = false }) {
                         </article>
                      ))}
                   </div>
+                  <a className='projects-more' href='/projects'>更多项目 <span>→</span></a>
                </>
             )}
          </section>

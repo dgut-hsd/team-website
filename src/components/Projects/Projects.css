@@ -476,3 +476,13 @@ body.modal-open {
 }
 
 .projects-container:not(.projects-container--grid) { margin-top: 0; }
+
+.projects-more {
+   display: inline-flex;
+   gap: .5rem;
+   margin-top: 1.25rem;
+   color: var(--text);
+   font-size: .9rem;
+   text-decoration: none;
+}
+.projects-more:hover { color: var(--accent); }
