@@ -9,7 +9,6 @@ import { HeroSection } from './components/HeroSection/HeroSection';
 import { AboutUs } from './components/AboutUs/AboutUs';
 import { TechStack } from './components/TechStack/TechStack';
 import { Honors } from './components/Honors/Honors';
-import { Team } from './components/Team/Team';
 import { MembersPage } from './components/MembersPage/MembersPage';
 import { Projects } from './components/Projects/Projects';
 import { Faq } from './components/Faq/Faq';
@@ -47,7 +46,6 @@ export default function App() {
             <AboutUs />
             <TechStack />
             <Honors />
-            <Team />
             <Projects />
             <Events />
             <Faq />
