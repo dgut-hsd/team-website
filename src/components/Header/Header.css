@@ -516,3 +516,17 @@ header a {
       width: 2.5rem;
    }
 }
+
+
+@media (max-width: 767px) {
+   .nav-join-link {
+      display: block;
+      position: absolute;
+      top: .75rem;
+      right: 4.25rem;
+      margin: 0;
+      padding: .55rem .8rem;
+      font-size: .82rem;
+      line-height: 1;
+   }
+}
