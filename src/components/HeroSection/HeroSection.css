@@ -296,3 +296,22 @@
       top: clamp(3rem, 7vh, 5rem);
    }
 }
+
+/* Restore hero breathing room while reserving a first-project scroll cue. */
+@media (min-width: 901px) {
+   .hero-section {
+      min-height: calc(100svh - 10rem);
+   }
+   .hero-grid {
+      padding-top: clamp(4.5rem, 9vh, 7rem);
+   }
+   .hero-description {
+      margin-top: clamp(2.75rem, 5vh, 4rem);
+   }
+   .hero-explore {
+      margin-top: var(--space-8);
+   }
+   .hero-art {
+      top: clamp(4.5rem, 9vh, 7rem);
+   }
+}
