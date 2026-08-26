@@ -327,6 +327,15 @@ header a {
    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+
+.nav-dropdown__menu::before {
+   position: absolute;
+   top: -0.65rem;
+   right: 0;
+   left: 0;
+   height: 0.65rem;
+   content: '';
+}
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu {
    opacity: 1;
