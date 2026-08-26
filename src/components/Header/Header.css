@@ -132,8 +132,8 @@ header a {
    color: var(--bg);
    border: 1px solid var(--text);
    white-space: nowrap;
-   padding: 0.5rem 1rem;
-   border-radius: var(--radius-sm);
+   padding: 0.55rem 1.1rem;
+   border-radius: 999px;
    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
    line-height: 1.6;
    display: none;
@@ -197,7 +197,7 @@ header a {
 @media (min-width: 768px) {
    header {
       justify-content: flex-end;
-      padding: 1rem;
+      padding: 1rem 2rem;
    }
 
    .menu {
@@ -210,7 +210,7 @@ header a {
       opacity: 1;
       pointer-events: auto;
       overflow: visible;
-      gap: 1.2rem;
+      gap: 1.5rem;
       justify-content: flex-end;
    }
 
@@ -224,7 +224,7 @@ header a {
    }
 
    .nav-links {
-      font-size: 1.1rem;
+      font-size: 0.875rem;
       padding: 0;
    }
 
@@ -251,11 +251,11 @@ header a {
    }
 
    .nav-links {
-      font-size: 1rem;
+      font-size: 0.875rem;
    }
 
    .nav-join-link {
-      font-size: 0.8rem;
+      font-size: 0.875rem;
    }
 }
 
