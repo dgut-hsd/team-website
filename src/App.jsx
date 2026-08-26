@@ -16,6 +16,7 @@ import { SkillsPage } from './components/SkillsPage/SkillsPage';
 import { HonorsPage } from './components/HonorsPage/HonorsPage';
 import { EventsPage } from './components/EventsPage/EventsPage';
 import { JoinPage } from './components/JoinPage/JoinPage';
+import { EngineeringNotesPage } from './components/EngineeringNotesPage/EngineeringNotesPage';
 
 export default function App() {
    useEffect(() => {
@@ -28,6 +29,10 @@ export default function App() {
    
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
+
+   if (window.location.pathname === '/notes') {
+      return <EngineeringNotesPage />;
+   }
 
    if (window.location.pathname === '/projects') {
       return <ProjectsPage />;
