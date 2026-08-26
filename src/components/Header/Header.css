@@ -476,3 +476,23 @@ header a {
       padding: 0.7rem 0.75rem;
    }
 }
+.mobile-join-item {
+   display: none;
+}
+
+@media (max-width: 767px) {
+   .nav-join-link {
+      display: none;
+   }
+
+   .mobile-join-item {
+      display: flex;
+      margin-top: 0.5rem;
+      border-top: 1px solid var(--border);
+   }
+
+   .mobile-join-item .nav-links {
+      color: var(--text);
+      font-weight: var(--weight-medium);
+   }
+}
