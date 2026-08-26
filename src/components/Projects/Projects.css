@@ -512,3 +512,7 @@ body.modal-open {
       justify-self: end;
    }
 }
+
+.projects-container:not(.projects-container--grid) .project-row__visual {
+   aspect-ratio: 16 / 10;
+}
