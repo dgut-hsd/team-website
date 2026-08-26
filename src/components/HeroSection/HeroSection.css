@@ -246,3 +246,12 @@
 @media (max-width: 900px) {
    .hero-grid { padding: 4rem 0 3rem; }
 }
+
+/* The hero no longer has a third index row, so do not reserve a flex track for it. */
+.hero-shell {
+   grid-template-rows: auto;
+   min-height: auto;
+}
+.hero-grid {
+   padding-bottom: 1.5rem;
+}
