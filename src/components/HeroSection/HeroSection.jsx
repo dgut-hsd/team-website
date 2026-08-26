@@ -5,11 +5,6 @@ export function HeroSection() {
    return (
       <section className='hero-section' id='hero-section'>
          <div className='hero-shell'>
-            <div className='hero-kicker'>
-               <span>HSD / DONGGUAN UNIVERSITY OF TECHNOLOGY</span>
-               <span>RESEARCH &amp; ENGINEERING</span>
-            </div>
-
             <div className='hero-grid'>
                <div className='hero-copy'>
                   <h1 className='hero-title'>
@@ -33,7 +28,6 @@ export function HeroSection() {
 
                <div className='hero-art' aria-hidden='true'>
                   <img src={heroAbstract} alt='' />
-                  <span>FIELD STUDY / 01</span>
                </div>
             </div>
 

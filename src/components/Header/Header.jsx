@@ -20,7 +20,7 @@ export function Header() {
       <header className={`header ${isSticky ? 'sticky' : ''}`}>
          <div className='icon-container'>
             <a href='#' className='icon'>
-               HSD-DGUT
+               HSD / DONGGUAN UNIVERSITY OF TECHNOLOGY
             </a>
          </div>
 
