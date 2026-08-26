@@ -122,7 +122,9 @@
 .hero-art {
    align-self: center;
    justify-self: end;
-   width: min(100%, 560px);
+   width: min(100%, 620px);
+   margin-top: -2rem;
+   margin-right: 2rem;
    color: var(--text-muted);
    animation: hero-reveal var(--duration-slow) 220ms var(--ease-out) both;
 }
@@ -172,7 +174,9 @@
    }
 
    .hero-art {
-      width: min(92%, 540px);
+      width: min(94%, 590px);
+      margin-top: -1.5rem;
+      margin-right: 1rem;
       justify-self: end;
    }
 }
@@ -205,7 +209,9 @@
    }
 
    .hero-art {
-      width: min(92%, 430px);
+      width: min(96%, 460px);
+      margin-top: -1rem;
+      margin-right: 0.5rem;
    }
 
    .hero-index {
