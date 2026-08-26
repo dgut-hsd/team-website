@@ -9,7 +9,7 @@ export const teacherData = [
       img: '/src/assets/team/teachers/teacher_tsl.jpg',
       name: '田盛兰',
       title: '指导老师',
-      detail: '粤台计算机学院教师',
+      detail: '计算机学院辅导员',
    },
 ];
 

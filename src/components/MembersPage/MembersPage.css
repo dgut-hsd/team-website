@@ -260,3 +260,22 @@
       padding-top: 1rem;
    }
 }
+
+
+/* Faculty cards use an adaptive grid */
+.members-page .teacher-card-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   width: 100%;
+   max-width: 56rem;
+   margin-inline: 0;
+}
+.members-page .teacher-card {
+   width: 100%;
+   min-width: 0;
+}
+@media (max-width: 767px) {
+   .members-page .teacher-card-container {
+      grid-template-columns: 1fr;
+   }
+}
