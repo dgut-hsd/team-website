@@ -132,10 +132,10 @@ header a {
    color: var(--bg);
    border: 1px solid var(--text);
    white-space: nowrap;
-   padding: 0.55rem 1.1rem;
+   padding: 0.35rem 1rem;
    border-radius: 999px;
    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-   line-height: 1.6;
+   line-height: 1.35;
    display: none;
    margin-left: 2rem;
    max-width: 0;
