@@ -88,8 +88,8 @@ header a {
 .nav-links:hover,
 .nav-links:active,
 .nav-links:focus {
-   color: #007bff;
-   box-shadow: 0 2px 0 #007bff;
+   color: var(--accent);
+   box-shadow: 0 2px 0 var(--accent);
 }
 
 .hamburger {
@@ -145,7 +145,7 @@ header a {
 
 .nav-join-link:hover,
 .nav-join-link:focus {
-   color: #007bff;
+   color: var(--accent);
    background-color: var(--bg);
    outline: none;
 }
