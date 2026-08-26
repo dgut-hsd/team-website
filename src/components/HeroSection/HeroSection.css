@@ -65,6 +65,10 @@
    letter-spacing: -0.025em;
 }
 
+.hero-title > span {
+   white-space: nowrap;
+}
+
 .hero-title span {
    display: block;
    animation: hero-reveal var(--duration-slow) var(--ease-out) both;
