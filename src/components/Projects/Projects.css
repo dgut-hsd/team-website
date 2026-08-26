@@ -538,3 +538,8 @@ body.modal-open {
       aspect-ratio: 16 / 10;
    }
 }
+
+.projects-container .project-row__copy p,
+.projects-container .project-card p {
+   text-align: left;
+}
