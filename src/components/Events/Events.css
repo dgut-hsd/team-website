@@ -1,0 +1,80 @@
+/* === Base (Mobile) Styles === */
+.events-container {
+   background-color: var(--paper);
+   padding: 2rem 0 5rem;
+   text-align: center;
+   overflow: hidden;
+   mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.events-gallery-wrapper {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   overflow: hidden;
+}
+
+.events-swiper-1,
+.events-swiper-2 {
+   width: 100%;
+   overflow: hidden;
+}
+
+.events-swiper-1 .swiper-slide,
+.events-swiper-2 .swiper-slide {
+   width: 220px;
+   height: 150px;
+   flex-shrink: 0;
+}
+
+.events-swiper-1 .swiper-wrapper,
+.events-swiper-2 .swiper-wrapper {
+   transition-timing-function: linear !important;
+   will-change: transform;
+}
+
+.events-swiper-1 .swiper-slide img,
+.events-swiper-2 .swiper-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-swiper-1 .swiper-slide img:hover,
+.events-swiper-2 .swiper-slide img:hover {
+   transform: scale(1.01);
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .events-container {
+      padding: 3rem 2rem 6rem;
+   }
+}
+
+/* === Laptop & Up === */
+@media (min-width: 1100px) {
+   .events-swiper-1 .swiper-slide,
+   .events-swiper-2 .swiper-slide {
+      width: 240px;
+      height: 210px;
+   }
+}
+
+/* === Large Desktop & Up === */
+@media (min-width: 1920px) {
+   .events-gallery-wrapper {
+      gap: 2rem;
+   }
+
+   .events-swiper-1 .swiper-slide,
+   .events-swiper-2 .swiper-slide {
+      width: 300px;
+      height: 250px;
+   }
+}

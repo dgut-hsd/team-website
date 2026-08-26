@@ -1,0 +1,34 @@
+/* === Base (Mobile) Styles === */
+.timeline-container {
+   width: 100%;
+}
+
+.timeline-container h2 {
+   flex-shrink: 0;
+   margin-top: 10px 0;
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .timeline-container p {
+      text-align: left;
+   }
+}
+
+/* === Laptop & Up === */
+@media (min-width: 1100px) {
+   .timeline-text {
+      margin-bottom: 3rem;
+   }
+}
+
+/* === Large Desktop & Up === */
+@media (min-width: 1920px) {
+   .timeline-container {
+      padding: 8rem;
+   }
+
+   .timeline-text {
+      margin-bottom: 4rem;
+   }
+}

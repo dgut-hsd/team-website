@@ -1,0 +1,77 @@
+/* === Base (Mobile) Styles === */
+.join-container {
+   background-color: var(--paper);
+   gap: 10px;
+}
+
+.join-container h2 {
+   margin: 10px 0;
+   font-size: 3.2rem;
+}
+
+.join-container .text {
+   font-size: 3.2rem;
+}
+
+.join-container p {
+   max-width: 90%;
+   text-align: center;
+}
+
+.join-us-link {
+   padding: 1rem 2rem;
+   text-decoration: none;
+   color: #fff;
+   font-weight: 500;
+   background: linear-gradient(to right, #8b5cf6, #d946ef);
+   cursor: pointer;
+   transition: all 0.3s;
+   border-radius: 25px;
+   box-shadow: 0 4px 8px rgb(139 92 246 / 0.3);
+   margin-top: 2rem;
+   font-size: 1.1rem;
+}
+
+.join-us-link:hover {
+   box-shadow: 0 4px 15px rgb(139 92 246 / 0.7);
+   background: linear-gradient(to right, #8253f0, #d33ceb);
+   transform: scale(1.05);
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .join-container h2 {
+      white-space: nowrap;
+      padding: 0;
+   }
+
+   .join-us-link {
+      font-size: 1.2rem;
+   }
+}
+
+/* === Laptop & Up === */
+@media (min-width: 1100px) {
+   .join-container {
+      gap: 0.5rem;
+   }
+
+   .join-container .text {
+      font-size: 4rem;
+   }
+}
+
+/* === Large Desktop & Up === */
+@media (min-width: 1920px) {
+   .join-container h2 {
+      margin: 1rem 0;
+   }
+
+   .join-container .text {
+      font-size: 6rem;
+   }
+
+   .join-us-link {
+      font-size: 1.5rem;
+   }
+}

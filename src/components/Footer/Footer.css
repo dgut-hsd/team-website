@@ -1,0 +1,129 @@
+/* === Base (Mobile) Styles === */
+.footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--paper-raised);
+   color: var(--charcoal);
+   width: 100%;
+   padding: 2rem 0 1rem;
+   overflow: hidden;
+}
+
+.footer h3 {
+   font-size: 1.2rem;
+   margin: 8px 0;
+}
+
+.footer p {
+   font-size: 1rem;
+   color: var(--charcoal-muted);
+   margin: 8px 0;
+   text-align: center;
+}
+
+.footer-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10px 5px;
+   width: 100%;
+   border-bottom: 1px solid var(--hairline);
+   gap: 1rem;
+   align-items: center;
+}
+
+.footer-detail,
+.footer-contack,
+.footer-qr {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   text-align: center;
+}
+
+.footer-contack p {
+   color: var(--charcoal-muted);
+   margin: 6px 0;
+   padding-bottom: 4px;
+   font-size: 1rem;
+}
+
+.footer-qr img {
+   width: 120px;
+   height: 120px;
+   border-radius: 4px;
+}
+
+.footer-copyright .copyright-text {
+   font-size: 1rem;
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .footer {
+      padding: 0;
+   }
+
+   .footer-content {
+      flex-direction: row;
+      padding: 10px 20px;
+      gap: 0;
+      justify-content: space-around;
+      align-items: flex-start;
+   }
+
+   .footer h3 {
+      font-size: 1.4rem;
+      margin: 5px 0;
+   }
+
+   .footer p {
+      font-size: 1rem;
+      margin: 10px 0;
+      text-align: left;
+   }
+
+   .footer-detail,
+   .footer-contack,
+   .footer-qr {
+      width: auto;
+      align-items: flex-start;
+      text-align: left;
+   }
+
+   .footer-contack p {
+      font-size: 1.4rem;
+      margin: 8px 0;
+   }
+
+   .footer-qr {
+      align-items: center;
+   }
+
+   .footer-qr img {
+      width: 100px;
+      height: 100px;
+   }
+
+   .footer-copyright .copyright-text {
+      font-size: 1.2rem;
+   }
+}
+
+/* === Large Desktop & Up === */
+@media (min-width: 1920px) {
+   .footer h3 {
+      font-size: 2rem;
+   }
+
+   .footer p {
+      font-size: 1.5rem;
+   }
+
+   .footer-copyright .copyright-text {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+   }
+}

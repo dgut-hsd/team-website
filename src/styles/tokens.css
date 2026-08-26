@@ -1,0 +1,103 @@
+/* HSD Design Tokens — Editorial Systems / v0.2 */
+:root {
+   /* Color */
+   --bg: #faf9f5;
+   --surface: #f0eee6;
+   --text: #141413;
+   --text-secondary: #5e5d59;
+   --text-muted: #87867f;
+   --border: #e8e6dc;
+   --border-strong: #d1cfc5;
+   --accent: #d97757;
+   --accent-soft: #f3dfd6;
+   --white: #ffffff;
+
+   /* Semantic color */
+   --color-success: #237a57;
+   --color-danger: #b42318;
+   --color-focus: #141413;
+
+   /* Font family */
+   --font-display: Inter, Geist, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   --font-sans: "Noto Sans SC", "Source Han Sans SC", "PingFang SC",
+      "Microsoft YaHei", sans-serif;
+   --font-mono: "IBM Plex Mono", "JetBrains Mono", "SFMono-Regular", Consolas,
+      monospace;
+
+   /* Font size */
+   --text-xs: 0.75rem;
+   --text-sm: 0.875rem;
+   --text-base: 1rem;
+   --text-lg: 1.125rem;
+   --text-xl: 1.25rem;
+   --text-2xl: clamp(1.5rem, 2.2vw, 2rem);
+   --text-3xl: clamp(2rem, 4vw, 3.5rem);
+   --text-display: clamp(3rem, 7.5vw, 7rem);
+
+   /* Font weight */
+   --weight-regular: 400;
+   --weight-medium: 500;
+   --weight-semibold: 600;
+
+   /* Line height */
+   --leading-tight: 1.02;
+   --leading-heading: 1.15;
+   --leading-body: 1.7;
+
+   /* Spacing — 4px base grid */
+   --space-1: 0.25rem;
+   --space-2: 0.5rem;
+   --space-3: 0.75rem;
+   --space-4: 1rem;
+   --space-5: 1.25rem;
+   --space-6: 1.5rem;
+   --space-8: 2rem;
+   --space-10: 2.5rem;
+   --space-12: 3rem;
+   --space-16: 4rem;
+   --space-20: 5rem;
+   --space-24: 6rem;
+   --space-32: 8rem;
+
+   /* Layout */
+   --layout-max: 1240px;
+   --layout-gutter: 40px;
+   --layout-gutter-mobile: 20px;
+   --section-space: clamp(4rem, 9vw, 8rem);
+
+   /* Radius — square by default */
+   --radius-none: 0;
+   --radius-control: 4px;
+   --radius-avatar: 999px;
+
+   /* Border */
+   --rule: 1px solid var(--border);
+   --rule-strong: 1px solid var(--border-strong);
+
+   /* Motion */
+   --duration-fast: 160ms;
+   --duration-base: 240ms;
+   --duration-slow: 480ms;
+   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+   /* Compatibility aliases — remove after component migration */
+   --paper: var(--bg);
+   --paper-raised: var(--surface);
+   --charcoal: var(--text);
+   --charcoal-muted: var(--text-secondary);
+   --hairline: var(--border);
+}
+
+@media (max-width: 767px) {
+   :root {
+      --layout-gutter: var(--layout-gutter-mobile);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   :root {
+      --duration-fast: 0ms;
+      --duration-base: 0ms;
+      --duration-slow: 0ms;
+   }
+}

@@ -1,0 +1,53 @@
+/* === Base (Mobile) Styles === */
+.honors-container {
+   overflow: hidden;
+   position: relative;
+   mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.honors-container h2 {
+   margin: 10px 0;
+}
+
+.honor-card {
+   margin: 0 10px;
+   height: 250px;
+   width: 320px;
+   overflow: hidden;
+   transition: transform 0.3s ease-in-out;
+}
+
+.honor-card:hover {
+   transform: scale(1.05);
+   z-index: 10;
+}
+
+.honor-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   padding: 15px;
+   display: block;
+   border-radius: 30px;
+}
+
+.rfm-marquee-container {
+   overflow-y: hidden;
+}
+
+/* === Tablet & Up === */
+@media (min-width: 768px) {
+   .honor-card {
+      height: 300px;
+      width: 400px;
+      margin: 0 15px;
+   }
+}
+
+/* === Large Desktop & Up === */
+@media (min-width: 1920px) {
+   .honor-card {
+      height: 400px;
+      width: 480px;
+   }
+}
