@@ -354,3 +354,19 @@
       top: clamp(6rem, 13vh, 10rem);
    }
 }
+
+/* Expanded editorial hero spacing. */
+@media (min-width: 901px) {
+   .hero-grid {
+      padding-top: clamp(8rem, 16vh, 12rem);
+   }
+   .hero-description {
+      margin-top: clamp(7rem, 11vh, 9rem);
+   }
+   .hero-explore {
+      margin-top: clamp(4.5rem, 7vh, 6rem);
+   }
+   .hero-art {
+      top: clamp(8rem, 16vh, 12rem);
+   }
+}
