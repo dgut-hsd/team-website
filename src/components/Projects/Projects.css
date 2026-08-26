@@ -516,3 +516,25 @@ body.modal-open {
 .projects-container:not(.projects-container--grid) .project-row__visual {
    aspect-ratio: 16 / 10;
 }
+
+/* Featured rows need their own breathing room. */
+.projects-container:not(.projects-container--grid) .project-row {
+   padding-inline: clamp(1rem, 2.5vw, 2.5rem);
+}
+@media (max-width: 767px) {
+   .projects-container:not(.projects-container--grid) .project-row {
+      grid-template-columns: 1fr;
+      gap: .8rem;
+      padding: 1.25rem;
+   }
+   .projects-container:not(.projects-container--grid) .project-row__number,
+   .projects-container:not(.projects-container--grid) .project-row__copy,
+   .projects-container:not(.projects-container--grid) .project-row__visual {
+      grid-column: 1;
+   }
+   .projects-container:not(.projects-container--grid) .project-row__visual {
+      width: 100%;
+      margin-top: 0;
+      aspect-ratio: 16 / 10;
+   }
+}
