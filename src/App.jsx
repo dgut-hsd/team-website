@@ -8,6 +8,7 @@ import { Header } from './components/Header/Header';
 import { HeroSection } from './components/HeroSection/HeroSection';
 import { MembersPage } from './components/MembersPage/MembersPage';
 import { Projects } from './components/Projects/Projects';
+import { ProjectsPage } from './components/ProjectsPage/ProjectsPage';
 import { Footer } from './components/Footer/Footer';
 import { MessagesPage } from './components/MessagesPage/MessagesPage';
 import { AboutPage } from './components/AboutPage/AboutPage';
@@ -27,6 +28,10 @@ export default function App() {
    
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
+
+   if (window.location.pathname === '/projects') {
+      return <ProjectsPage />;
+   }
 
    if (window.location.pathname === '/about') {
       return <AboutPage />;

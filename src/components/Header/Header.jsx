@@ -5,6 +5,7 @@ function getActiveNav() {
    const path = window.location.pathname;
    const hash = window.location.hash;
    if (path === '/members') return 'members';
+   if (path === '/projects') return 'projects';
    if (path === '/about/messages') return 'notes';
    if (path === '/about' || path === '/about/skills' || path === '/about/honors' || path === '/about/life') return 'about';
    if (hash === '#projects') return 'projects';
@@ -38,7 +39,7 @@ export function Header() {
          <ul className='menu'>
             <li><a href='/' className={navClass('home')}>首页</a></li>
             <li><a href='/members' className={navClass('members')}>成员</a></li>
-            <li><a href='#projects' className={navClass('projects')}>项目</a></li>
+            <li><a href='/projects' className={navClass('projects')}>项目</a></li>
             <li><a href='/about/messages' className={navClass('notes')}>工程笔记</a></li>
             <li className={`nav-dropdown ${isAboutOpen ? 'is-open' : ''}`}>
                <button type='button' className={`nav-links nav-dropdown__trigger ${activeNav === 'about' ? 'is-active' : ''}`} onClick={() => setIsAboutOpen((open) => !open)}>关于 <span className='nav-dropdown__chevron' aria-hidden='true'></span></button>
