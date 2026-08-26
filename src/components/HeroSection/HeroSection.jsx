@@ -1,4 +1,5 @@
 import './HeroSection.css';
+import heroAbstract from '../../assets/hero-abstract.svg';
 
 export function HeroSection() {
    return (
@@ -14,6 +15,10 @@ export function HeroSection() {
                   <span>从软件系统，</span>
                   <span>到人工智能。</span>
                </h1>
+               <div className='hero-art' aria-hidden='true'>
+                  <img src={heroAbstract} alt='' />
+                  <span>FIELD STUDY / 01</span>
+               </div>
 
                <div className='hero-statement'>
                   <p>这是一个由学生主导的研究与工程共同体。</p>
