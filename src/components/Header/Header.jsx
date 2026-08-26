@@ -9,7 +9,7 @@ function getActiveNav() {
    if (path === '/about/messages') return 'notes';
    if (path === '/about' || path === '/about/skills' || path === '/about/honors' || path === '/about/life') return 'about';
    if (hash === '#about-us' || hash === '#tech-stack' || hash === '#honors' || hash === '#events') return 'about';
-   return path === '/' && !hash ? 'home' : '';
+   return path === '/' ? 'home' : '';
 }
 
 export function Header() {
