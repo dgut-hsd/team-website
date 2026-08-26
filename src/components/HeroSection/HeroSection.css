@@ -42,7 +42,7 @@
    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
    gap: clamp(3rem, 8vw, 8rem);
    align-items: center;
-   padding: clamp(4rem, 9vh, 7.5rem) 0;
+   padding: clamp(5.25rem, 12vh, 9.5rem) 0;
 }
 
 .hero-copy {
@@ -76,7 +76,7 @@
 
 .hero-description {
    max-width: 42rem;
-   margin: clamp(2rem, 5vh, 3.5rem) 0 0;
+   margin: clamp(2.75rem, 6vh, 4.5rem) 0 0;
    color: var(--text-secondary);
    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
    font-weight: var(--weight-medium);
@@ -140,7 +140,7 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: var(--space-6);
-   padding: var(--space-4) 0 var(--space-5);
+   padding: var(--space-6) 0 var(--space-6);
    border-top: var(--rule);
    color: var(--text-muted);
 }
@@ -168,7 +168,7 @@
    .hero-grid {
       grid-template-columns: 1fr;
       gap: var(--space-16);
-      padding: var(--space-16) 0;
+      padding: var(--space-20) 0;
    }
 
    .hero-art {
@@ -190,7 +190,7 @@
 
    .hero-grid {
       gap: var(--space-12);
-      padding: var(--space-12) 0;
+      padding: var(--space-16) 0;
    }
 
    .hero-title {
