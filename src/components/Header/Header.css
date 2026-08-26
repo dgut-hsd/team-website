@@ -550,3 +550,15 @@ header a {
 /* Join is a regular navigation item on every viewport. */
 .mobile-join-item { display: flex; }
 @media (min-width: 768px) { .mobile-join-item { margin-top: 0; border-top: 0; } }
+
+/* Desktop nav breathing room */
+@media (min-width: 768px) {
+   .menu {
+      margin-right: 2.5rem;
+      gap: 2rem;
+   }
+}
+@media (min-width: 1920px) {
+   .menu { gap: 2.4rem; }
+}
+
