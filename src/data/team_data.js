@@ -1,9 +1,15 @@
 export const teacherData = [
    {
-      img: '/src/assets/team/teacher_img1.png',
+      img: '/src/assets/team/teacher/teacher_tbm.png',
       name: '涂保民',
       title: '指导老师',
       detail: '粤台计算机学院系主任',
+   },
+   {
+      img: '/src/assets/team/teacher/teacher_tsl.jpg',
+      name: '田盛兰',
+      title: '指导老师',
+      detail: '粤台计算机学院教师',
    },
 ];
 
