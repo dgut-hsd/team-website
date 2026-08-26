@@ -284,3 +284,10 @@
 .members-page .team-container {
    padding-top: 0;
 }
+
+
+/* The standalone members page should enter at its natural position. */
+.members-page .team-container[data-aos] {
+   transform: none !important;
+   opacity: 1 !important;
+}
