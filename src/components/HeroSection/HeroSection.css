@@ -338,3 +338,19 @@
       margin-top: clamp(2rem, 4vh, 3rem);
    }
 }
+
+/* Deliberately spacious desktop hero rhythm. */
+@media (min-width: 901px) {
+   .hero-grid {
+      padding-top: clamp(6rem, 13vh, 10rem);
+   }
+   .hero-description {
+      margin-top: clamp(5rem, 9vh, 7rem);
+   }
+   .hero-explore {
+      margin-top: clamp(3rem, 5vh, 4.5rem);
+   }
+   .hero-art {
+      top: clamp(6rem, 13vh, 10rem);
+   }
+}
