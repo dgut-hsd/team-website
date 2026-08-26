@@ -18,6 +18,7 @@ import { JoinUs } from './components/JoinUs/JoinUs';
 import { MessagesPage } from './components/MessagesPage/MessagesPage';
 import { AboutPage } from './components/AboutPage/AboutPage';
 import { SkillsPage } from './components/SkillsPage/SkillsPage';
+import { HonorsPage } from './components/HonorsPage/HonorsPage';
 
 export default function App() {
    useEffect(() => {
@@ -37,6 +38,10 @@ export default function App() {
 
    if (window.location.pathname === '/about/skills') {
       return <SkillsPage />;
+   }
+
+   if (window.location.pathname === '/about/honors') {
+      return <HonorsPage />;
    }
 
    if (window.location.pathname === '/about/messages') {

@@ -6,7 +6,7 @@ function getActiveNav() {
    const hash = window.location.hash;
    if (path === '/members') return 'members';
    if (path === '/about/messages') return 'notes';
-   if (path === '/about' || path === '/about/skills') return 'about';
+   if (path === '/about' || path === '/about/skills' || path === '/about/honors') return 'about';
    if (hash === '#projects') return 'projects';
    if (hash === '#about-us' || hash === '#tech-stack' || hash === '#honors' || hash === '#events') return 'about';
    return path === '/' && !hash ? 'home' : '';
@@ -46,7 +46,7 @@ export function Header() {
                   <a href='/about' className='nav-dropdown__link'>关于我们</a>
                   <a href='/about/messages' className='nav-dropdown__link'>消息</a>
                   <a href='/about/skills' className='nav-dropdown__link'>技能库</a>
-                  <a href='#honors' className='nav-dropdown__link'>荣誉</a>
+                  <a href='/about/honors' className='nav-dropdown__link'>荣誉</a>
                   <a href='#events' className='nav-dropdown__link'>HSD生活</a>
                </div>
             </li>
