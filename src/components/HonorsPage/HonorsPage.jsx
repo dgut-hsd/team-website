@@ -7,7 +7,7 @@ export function HonorsPage() {
       <div className='wrapper'>
          <Header />
          <main className='standalone-page'>
-            <Honors staticGrid />
+            <Honors />
          </main>
          <Footer />
       </div>
