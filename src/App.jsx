@@ -29,6 +29,10 @@ export default function App() {
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
 
+   if (window.location.pathname === '/about/messages') {
+      return <MessagesPage />;
+   }
+
    return (
       <div className='wrapper'>
          <Header />
