@@ -51,3 +51,30 @@
       width: 480px;
    }
 }
+
+
+.honors-container--static {
+   mask: none;
+   overflow: visible;
+   align-items: flex-start;
+}
+.honors-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+   gap: 1rem;
+   width: 100%;
+   margin-top: 1.5rem;
+}
+.honors-container--static .honor-card {
+   width: 100%;
+   height: clamp(180px, 24vw, 300px);
+   margin: 0;
+}
+@media (max-width: 767px) {
+   .honors-grid {
+      grid-template-columns: 1fr;
+   }
+   .honors-container--static .honor-card {
+      height: 220px;
+   }
+}
