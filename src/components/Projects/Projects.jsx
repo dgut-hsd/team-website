@@ -53,7 +53,7 @@ export function Projects({ gridView = false }) {
                               <h2>{item.name}</h2>
                               <p>{item.text}</p>
                            </div>
-                           <div className='project-row__visual'><img src={item.img} alt='' /><span className='project-row__arrow'>↗</span></div>
+                           <div className='project-row__visual'><img src={item.img} alt='' /></div>
                         </article>
                      ))}
                   </div>
