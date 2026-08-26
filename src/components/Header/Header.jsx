@@ -8,7 +8,6 @@ function getActiveNav() {
    if (path === '/projects') return 'projects';
    if (path === '/about/messages') return 'notes';
    if (path === '/about' || path === '/about/skills' || path === '/about/honors' || path === '/about/life') return 'about';
-   if (hash === '#projects') return 'projects';
    if (hash === '#about-us' || hash === '#tech-stack' || hash === '#honors' || hash === '#events') return 'about';
    return path === '/' && !hash ? 'home' : '';
 }
@@ -19,18 +18,11 @@ export function Header() {
 
    useEffect(() => {
       const syncActiveNav = () => setActiveNav(getActiveNav());
-      const syncProjectAnchor = (event) => {
-         if (event.target instanceof Element && event.target.closest("a[href='#projects']")) {
-            setActiveNav('projects');
-         }
-      };
       window.addEventListener('hashchange', syncActiveNav);
       window.addEventListener('popstate', syncActiveNav);
-      document.addEventListener('click', syncProjectAnchor, true);
       return () => {
          window.removeEventListener('hashchange', syncActiveNav);
          window.removeEventListener('popstate', syncActiveNav);
-         document.removeEventListener('click', syncProjectAnchor, true);
       };
    }, []);
 
