@@ -255,3 +255,13 @@
 .hero-grid {
    padding-bottom: 1.5rem;
 }
+
+/* Keep the right illustration from determining the vertical gap below the CTA. */
+@media (min-width: 901px) {
+   .hero-grid { position: relative; display: block; }
+   .hero-copy { max-width: 62%; }
+   .hero-art { position: absolute; top: 50%; right: 2rem; width: min(38%, 480px); margin: 0; transform: translateY(-50%); }
+}
+@media (max-width: 900px) {
+   .hero-art { position: static; transform: none; }
+}
