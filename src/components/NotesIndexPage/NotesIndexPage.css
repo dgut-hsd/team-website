@@ -1,0 +1,14 @@
+.notes-index-page { min-height: 100vh; background: var(--bg); color: var(--text); }
+.notes-index-page__main { width: min(100% - 2rem, var(--layout-max)); margin: 0 auto; padding: clamp(4rem, 10vw, 9rem) 0; }
+.notes-index-page__header { max-width: 44rem; padding-bottom: clamp(3rem, 7vw, 6rem); border-bottom: 1px solid var(--border); }
+.notes-index-page__header > span { color: var(--accent); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .07em; }
+.notes-index-page__header h1 { margin: 1rem 0 0; font-size: clamp(3rem, 7vw, 6rem); font-weight: var(--weight-medium); line-height: 1; letter-spacing: -.045em; }
+.notes-index-page__header p { margin: 1.5rem 0 0; color: var(--text-secondary); font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.7; }
+.notes-index-list { border-bottom: 1px solid var(--border); }
+.note-index-item { display: grid; grid-template-columns: 7rem 10rem minmax(0, 1fr) 2rem; gap: 1.5rem; align-items: start; padding: clamp(1.5rem, 3vw, 2.5rem) 0; color: var(--text); border-bottom: 1px solid var(--border); text-decoration: none; transition: background-color 180ms ease; }
+.note-index-item:hover { background: var(--surface); }
+.note-index-item time, .note-index-item__category { padding-top: .35rem; color: var(--text-muted); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; }
+.note-index-item h2 { margin: 0; font-size: clamp(1.3rem, 2.3vw, 2rem); font-weight: var(--weight-medium); letter-spacing: -.02em; }
+.note-index-item p { max-width: 42rem; margin: .6rem 0 0; color: var(--text-secondary); line-height: 1.65; text-align: left; }
+.note-index-item__arrow { padding-top: .25rem; text-align: right; }
+@media (max-width: 767px) { .notes-index-page__main { width: calc(100% - 2rem); padding: 3.5rem 0 5rem; } .notes-index-page__header { padding-bottom: 2.5rem; } .notes-index-page__header h1 { font-size: clamp(2.5rem, 12vw, 4rem); } .note-index-item { grid-template-columns: 1fr 1.5rem; gap: .75rem; } .note-index-item time, .note-index-item__category { padding: 0; } .note-index-item time { grid-column: 1; } .note-index-item__category { grid-column: 1; } .note-index-item > div { grid-column: 1; } .note-index-item__arrow { grid-column: 2; grid-row: 1 / span 3; } }

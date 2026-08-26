@@ -17,6 +17,7 @@ import { HonorsPage } from './components/HonorsPage/HonorsPage';
 import { EventsPage } from './components/EventsPage/EventsPage';
 import { JoinPage } from './components/JoinPage/JoinPage';
 import { EngineeringNotesPage } from './components/EngineeringNotesPage/EngineeringNotesPage';
+import { NotesIndexPage } from './components/NotesIndexPage/NotesIndexPage';
 
 export default function App() {
    useEffect(() => {
@@ -31,6 +32,10 @@ export default function App() {
    }, []);
 
    if (window.location.pathname === '/notes') {
+      return <NotesIndexPage />;
+   }
+
+   if (window.location.pathname === '/notes/ai-bid-review') {
       return <EngineeringNotesPage />;
    }
 
