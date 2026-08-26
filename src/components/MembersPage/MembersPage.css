@@ -250,3 +250,13 @@
       padding-top: 2rem;
    }
 }
+
+
+.members-page .team-container {
+   padding-top: clamp(1.25rem, 2.5vw, 2rem);
+}
+@media (max-width: 767px) {
+   .members-page .team-container {
+      padding-top: 1rem;
+   }
+}
