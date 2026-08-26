@@ -505,3 +505,10 @@ body.modal-open {
    margin-left: 0;
    text-align: left;
 }
+
+@media (min-width: 768px) {
+   .projects-container:not(.projects-container--grid) .project-row__visual {
+      width: min(100%, 300px);
+      justify-self: end;
+   }
+}
