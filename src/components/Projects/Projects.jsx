@@ -52,7 +52,6 @@ export function Projects({ gridView = false }) {
                            <div className='project-row__copy'>
                               <h2>{item.name}</h2>
                               <p>{item.text}</p>
-                              <span className='project-row__meta'>HSD / PROJECT {String(index + 1).padStart(2, '0')}</span>
                            </div>
                            <div className='project-row__visual'><img src={item.img} alt='' /><span className='project-row__arrow'>↗</span></div>
                         </article>
