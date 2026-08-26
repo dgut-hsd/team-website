@@ -1,6 +1,7 @@
 // Import project images
 import aiProposalImg from '../assets/projects/AI标书/插图.png';
 import aiEducationImg from '../assets/projects/AI教育/插图.png';
+import riscVImg from '../assets/projects/RISC-V/web截图.png';
 // 像素匠
 import pixelCraftIllustration from "../assets/projects/像素匠/插图.png";
 import pixelCraftImg2 from "../assets/projects/像素匠/像素匠_02.png";
@@ -44,6 +45,13 @@ export const projectsData = [
     images: [aiProposalImg],
     text: '以工程招投标场景为首个落地入口的面向企业复杂文档的可信审查智能体。',
     detailedDescription: '以工程招投标场景为首个落地入口，面向企业复杂文档构建可信审查智能体。',
+  },
+  {
+    name: 'RISC-V',
+    img: riscVImg,
+    images: [riscVImg],
+    text: '围绕 RISC-V 开源指令集开展学习、开发与工程实践。',
+    detailedDescription: '围绕 RISC-V 开源指令集开展学习、开发与工程实践，探索软硬件协同与开放计算生态。',
   },
   {
     name: '智能教学助手',
