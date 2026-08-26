@@ -45,10 +45,6 @@ export function Projects({ gridView = false }) {
                </>
             ) : (
                <>
-                  <div className='projects-heading'>
-                     <span className='projects-kicker'>SELECTED WORK</span>
-                     <span className='projects-year'>2024—2026</span>
-                  </div>
                   <div className='project-index'>
                      {projectsData.slice(0, 3).map((item, index) => (
                         <article className='project-row' key={item.name} onClick={() => openModal(item)}>

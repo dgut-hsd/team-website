@@ -461,3 +461,16 @@ body.modal-open {
       padding-top: 1rem;
    }
 }
+
+/* Home index uses the full editorial width with no extra masthead. */
+.projects-container:not(.projects-container--grid) {
+   padding-top: 0;
+}
+.projects-container:not(.projects-container--grid) .project-index,
+.projects-container:not(.projects-container--grid) .project-row {
+   width: 100%;
+}
+.projects-container:not(.projects-container--grid) .project-row__copy {
+   text-align: left;
+   justify-self: start;
+}
