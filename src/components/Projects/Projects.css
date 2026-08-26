@@ -486,3 +486,22 @@ body.modal-open {
    text-decoration: none;
 }
 .projects-more:hover { color: var(--accent); }
+
+/* Featured project illustrations: fixed 4:3 frame, never cropped. */
+.projects-container:not(.projects-container--grid) .project-row__visual {
+   height: auto;
+   aspect-ratio: 4 / 3;
+   background: var(--surface);
+}
+.projects-container:not(.projects-container--grid) .project-row__visual img {
+   object-fit: contain;
+   padding: .6rem;
+   background: var(--surface);
+}
+.projects-container:not(.projects-container--grid) .projects-more {
+   display: flex;
+   width: max-content;
+   margin-right: auto;
+   margin-left: 0;
+   text-align: left;
+}
