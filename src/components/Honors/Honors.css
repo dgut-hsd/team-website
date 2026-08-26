@@ -127,9 +127,8 @@
 
 main.standalone-page {
    display: block;
-   flex: 0 0 100vw;
    width: 100vw;
    min-width: 0;
    max-width: 100vw;
-   overflow: hidden;
+   overflow-x: clip;
 }
