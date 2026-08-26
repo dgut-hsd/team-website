@@ -3,7 +3,7 @@ import aiProposalImg from '../assets/projects/AI标书/插图.png';
 import aiEducationImg from '../assets/projects/AI教育/插图.png';
 import riscVImg from '../assets/projects/RISC-V/web截图.png';
 // 像素匠
-import pixelCraftIllustration from "../assets/projects/像素匠/像素匠_01.png";
+import pixelCraftIllustration from "../assets/projects/像素匠/插图.png";
 import pixelCraftImg2 from "../assets/projects/像素匠/像素匠_02.png";
 import pixelCraftImg3 from "../assets/projects/像素匠/像素匠_03.png";
 import pixelCraftImg4 from "../assets/projects/像素匠/像素匠_04.png";
@@ -38,6 +38,7 @@ import scoreboardImg1 from "../assets/projects/计分板/记分板_01.png";
 import scoreboardImg2 from "../assets/projects/计分板/记分板_02.png";
 import scoreboardImg3 from "../assets/projects/计分板/记分板_03.png";
 
+// 项目单页（/projects）的完整项目目录，与首页精选项目分开管理。
 export const projectsData = [
   {
     name: '标书智能审查',
@@ -59,7 +60,8 @@ export const projectsData = [
     images: [aiEducationImg],
     text: '面向真实的教学与学习流程，让 AI 及时、耐心、个性化地参与备课、知识组织与学习反馈。',
     detailedDescription: '面向真实的教学与学习流程，让 AI 及时、耐心、个性化地参与备课、知识组织与学习反馈。',
-  },  {
+  },
+  {
     name: "像素匠",
     img: pixelCraftIllustration,
     images: [

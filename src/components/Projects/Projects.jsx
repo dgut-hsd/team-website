@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { featuredProjectsData } from '../../data/featured-projects-data';
 import { projectsData } from '../../data/projects-data';
 
 import 'swiper/css';
@@ -46,7 +47,7 @@ export function Projects({ gridView = false }) {
             ) : (
                <>
                   <div className='project-index'>
-                     {projectsData.slice(0, 3).map((item, index) => (
+                     {featuredProjectsData.map((item, index) => (
                         <article className='project-row' key={item.name} onClick={() => openModal(item)}>
                            <div className='project-row__number'>{String(index + 1).padStart(2, '0')}</div>
                            <div className='project-row__copy'>
