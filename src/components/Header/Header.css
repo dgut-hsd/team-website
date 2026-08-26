@@ -172,7 +172,15 @@ header a {
 
 @media (max-width: 767px) {
    .nav-join-link {
-      display: none;
+      display: block;
+      position: absolute;
+      top: 0.7rem;
+      right: 4.5rem;
+      max-width: none;
+      max-height: none;
+      padding: 0.35rem 0.75rem;
+      visibility: visible;
+      font-size: 0.8rem;
    }
 }
 
@@ -438,6 +446,10 @@ header a {
 @media (max-width: 767px) {
    .nav-dropdown {
       position: static;
+   }
+
+   .menu-toggle:checked ~ .menu {
+      overflow: visible;
    }
 
    .nav-dropdown__menu,
