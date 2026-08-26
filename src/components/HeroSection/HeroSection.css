@@ -239,3 +239,10 @@
    margin-left: 0.08em;
    animation: none !important;
 }
+
+/* Keep the featured work close to the hero story. */
+.hero-section { min-height: auto; }
+.hero-grid { padding: clamp(4rem, 10vh, 7rem) 0 clamp(3rem, 6vh, 5rem); }
+@media (max-width: 900px) {
+   .hero-grid { padding: 4rem 0 3rem; }
+}
