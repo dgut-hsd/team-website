@@ -1,4 +1,6 @@
 // Import project images
+import aiProposalImg from '../assets/projects/AI标书/插图.png';
+import aiEducationImg from '../assets/projects/AI教育/插图.png';
 // 像素匠
 import pixelCraftImg1 from "../assets/projects/像素匠/像素匠_01.png";
 import pixelCraftImg2 from "../assets/projects/像素匠/像素匠_02.png";
@@ -37,6 +39,19 @@ import scoreboardImg3 from "../assets/projects/计分板/记分板_03.png";
 
 export const projectsData = [
   {
+    name: 'AI标书',
+    img: aiProposalImg,
+    images: [aiProposalImg],
+    text: '面向复杂招投标场景的文档理解与协作系统。',
+    detailedDescription: 'AI标书帮助团队从资料整理、要求提取到内容校验，建立更可靠的标书工作流。',
+  },
+  {
+    name: 'AI教育',
+    img: aiEducationImg,
+    images: [aiEducationImg],
+    text: '以人工智能辅助学习、备课与知识反馈。',
+    detailedDescription: 'AI教育探索面向真实教学场景的智能辅助工具，让学习过程更清晰、更可追踪。',
+  },  {
     name: "像素匠",
     img: pixelCraftImg1,
     images: [
