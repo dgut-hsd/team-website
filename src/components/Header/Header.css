@@ -546,3 +546,7 @@ header a {
       font-weight: var(--weight-medium);
    }
 }
+
+/* Join is a regular navigation item on every viewport. */
+.mobile-join-item { display: flex; }
+@media (min-width: 768px) { .mobile-join-item { margin-top: 0; border-top: 0; } }
