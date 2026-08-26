@@ -279,3 +279,8 @@
       grid-template-columns: 1fr;
    }
 }
+
+
+.members-page .team-container {
+   padding-top: 0;
+}
