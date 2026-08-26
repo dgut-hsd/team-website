@@ -31,7 +31,7 @@ export function Header() {
             <li><a href='https://github.com/HSD-DGUT' className='nav-links' target='_blank' rel='noreferrer'>GitHub ↗</a></li>
          </ul>
 
-         <a href='#join' className='nav-join-link'>加入 HSD</a>
+         <a href='#join' className='nav-join-link'>加入我们</a>
       </header>
    );
 }
