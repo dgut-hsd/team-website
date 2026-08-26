@@ -230,7 +230,7 @@
 }
 
 
-.hero-title__punct {
+.hero-title .hero-title__punct {
    display: inline-block;
    margin-left: 0.08em;
    animation: none !important;
