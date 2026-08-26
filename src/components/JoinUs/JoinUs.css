@@ -75,3 +75,20 @@
       font-size: 1.5rem;
    }
 }
+
+/* Primary join action uses the system charcoal token. */
+.join-us-link {
+   color: var(--bg);
+   background: var(--text);
+   border: 1px solid var(--text);
+   border-radius: 4px;
+   box-shadow: none;
+}
+.join-us-link:hover,
+.join-us-link:focus-visible {
+   color: var(--bg);
+   background: var(--text-secondary);
+   border-color: var(--text-secondary);
+   box-shadow: none;
+   transform: none;
+}
