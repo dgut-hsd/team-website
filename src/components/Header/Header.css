@@ -435,3 +435,32 @@ header a {
       padding: 0.5rem 0.75rem;
    }
 }
+@media (max-width: 767px) {
+   .nav-dropdown {
+      position: static;
+   }
+
+   .nav-dropdown__menu,
+   .nav-dropdown.is-open .nav-dropdown__menu {
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      right: 1rem;
+      left: 1rem;
+      width: auto;
+      margin: 0;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      transform: translateY(-0.35rem);
+   }
+
+   .nav-dropdown.is-open .nav-dropdown__menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+   }
+
+   .nav-dropdown__link {
+      padding: 0.7rem 0.75rem;
+   }
+}
