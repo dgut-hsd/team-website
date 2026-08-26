@@ -97,3 +97,39 @@
    background: var(--white);
    border-radius: 2px;
 }
+
+
+/* Keep the marquee inside the standalone page viewport. */
+.standalone-page {
+   width: 100%;
+   min-width: 0;
+   max-width: 100%;
+}
+.standalone-page .honors-container {
+   width: 100%;
+   min-width: 0;
+   max-width: 100%;
+}
+.standalone-page .rfm-marquee-container,
+.standalone-page .rfm-marquee {
+   min-width: 0;
+   max-width: 100%;
+}
+.standalone-page .honor-card {
+   width: 260px;
+}
+@media (max-width: 767px) {
+   .standalone-page .honor-card {
+      width: 220px;
+   }
+}
+
+
+main.standalone-page {
+   display: block;
+   flex: 0 0 100vw;
+   width: 100vw;
+   min-width: 0;
+   max-width: 100vw;
+   overflow: hidden;
+}
