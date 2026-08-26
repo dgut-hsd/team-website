@@ -496,3 +496,23 @@ header a {
       font-weight: var(--weight-medium);
    }
 }
+
+.nav-links {
+   position: relative;
+}
+.nav-links.is-active::after {
+   position: absolute;
+   right: 0;
+   bottom: -0.35rem;
+   left: 0;
+   height: 2px;
+   content: '';
+   background: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+@media (max-width: 767px) {
+   .nav-links.is-active::after {
+      right: auto;
+      bottom: .35rem;
+      width: 2.5rem;
+   }
+}
