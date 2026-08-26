@@ -10,7 +10,7 @@ export function Footer() {
             <div className='footer-content'>
                <div className='footer-detail'>
                   <h3>HSD-DGUT</h3>
-                  <p>东莞理工学院软件开发社团</p>
+                  <p>东莞理工学院 HSD 软件开发团队</p>
                </div>
 
                <div className='footer-contack'>

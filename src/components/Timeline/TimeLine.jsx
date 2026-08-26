@@ -53,7 +53,7 @@ export function TimeLine() {
             <span className='text'>历程</span>
          </h2>
          <p className='timeline-text'>
-            从一个想法到一群人的热爱，我们从未停止脚步
+            从一个想法到一支团队，我们持续在真实项目中学习与前进
          </p>
 
          <Timeline

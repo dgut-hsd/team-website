@@ -70,7 +70,7 @@ export function Events() {
             <span className='text'>剪影</span>
          </h2>
          <p style={{ marginBottom: '2rem' }}>
-            在HSD，我们不仅编码，更注重分享与交流
+            在 HSD，我们不仅构建系统，也重视分享、交流与共同成长。
          </p>
 
          <div className='events-gallery-wrapper'>

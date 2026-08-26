@@ -5,7 +5,7 @@ export const timelineData = [
    },
    {
       header: '2024年11月14日-第一次招新',
-      content: '社团注入新鲜血液，迎来第一批热爱技术的成员。',
+      content: '团队迎来第一批热爱技术的成员。',
    },
    {
       header: '2024年12月26日-团队成员第一次参加HDD',
@@ -33,7 +33,7 @@ export const timelineData = [
    },
    {
       header: '2025年3月30日-HSD第一次全体见面会',
-      content: '举办首次全体大会，明确社团发展方向。',
+      content: '举办首次全体大会，明确团队的发展方向。',
    },
    {
       header: '2025年4月5日-鸿蒙第二课',
@@ -61,6 +61,6 @@ export const timelineData = [
    },
    {
       header: '2025年11月14日-第二次招新',
-      content: '社团影响力提升，吸引更多技术爱好者加入。',
+      content: '团队影响力不断提升，吸引更多技术爱好者加入。',
    },
 ];

@@ -13,7 +13,7 @@ export function HeroSection() {
                   </h1>
 
                   <p className='hero-description'>
-                     这是一个由学生主导的研究与工程共同体，
+                     这是一个由学生主导的研究与工程团队，
                      <br />
                      我们通过构建真实系统理解计算，并探索新的可能。
                   </p>
