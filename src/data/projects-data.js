@@ -39,18 +39,18 @@ import scoreboardImg3 from "../assets/projects/计分板/记分板_03.png";
 
 export const projectsData = [
   {
-    name: 'AI标书',
+    name: '标书智能审查',
     img: aiProposalImg,
     images: [aiProposalImg],
-    text: '面向复杂招投标场景的文档理解与协作系统。',
-    detailedDescription: 'AI标书帮助团队从资料整理、要求提取到内容校验，建立更可靠的标书工作流。',
+    text: '以工程招投标场景为首个落地入口的面向企业复杂文档的可信审查智能体。',
+    detailedDescription: '以工程招投标场景为首个落地入口，面向企业复杂文档构建可信审查智能体。',
   },
   {
-    name: 'AI教育',
+    name: '智能教学助手',
     img: aiEducationImg,
     images: [aiEducationImg],
-    text: '以人工智能辅助学习、备课与知识反馈。',
-    detailedDescription: 'AI教育探索面向真实教学场景的智能辅助工具，让学习过程更清晰、更可追踪。',
+    text: '面向真实的教学与学习流程，让 AI 及时、耐心、个性化地参与备课、知识组织与学习反馈。',
+    detailedDescription: '面向真实的教学与学习流程，让 AI 及时、耐心、个性化地参与备课、知识组织与学习反馈。',
   },  {
     name: "像素匠",
     img: pixelCraftIllustration,
@@ -61,7 +61,7 @@ export const projectsData = [
       pixelCraftImg4,
       pixelCraftImg5,
     ],
-    text: "基于鸿蒙开发的专业图像编辑软件，提供强大的像素级图像编辑功能。",
+    text: "面向移动端数字创作，为 HarmonyOS 构建完整的像素画工具。从画布到图层，重新思考小屏设备上的像素创作体验。",
     detailedDescription:
       "像素匠是一款基于鸿蒙系统开发的专业图像编辑软件。它提供了强大的像素级编辑功能，支持多种专业滤镜和特效处理。软件采用直观的用户界面设计，让用户能够轻松进行复杂的图像处理操作。主要功能包括：精确的像素级编辑、丰富的滤镜库、实时预览效果、批量处理功能等。无论是专业设计师还是普通用户，都能通过像素匠创作出令人惊艳的视觉作品。",
   },
