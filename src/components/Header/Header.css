@@ -196,14 +196,14 @@ header a {
 /* === Tablet & Up === */
 @media (min-width: 768px) {
    header {
-      justify-content: space-between;
+      justify-content: flex-end;
       padding: 1rem;
    }
 
    .menu {
       position: static;
       flex-direction: row;
-      background-color: transparent;
+      background-color: var(--bg);
       backdrop-filter: none;
       max-height: none;
       padding: 0;
@@ -211,8 +211,7 @@ header a {
       pointer-events: auto;
       overflow: visible;
       gap: 1.2rem;
-      justify-content: center;
-      margin-left: 300px;
+      justify-content: flex-end;
    }
 
    .menu li {
