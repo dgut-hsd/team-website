@@ -127,3 +127,20 @@
       padding: 1rem 0;
    }
 }
+
+/* Full-bleed footer with an aligned editorial content rail. */
+footer {
+   width: 100vw;
+   max-width: 100vw;
+   align-self: stretch;
+}
+.footer {
+   width: 100%;
+   max-width: none;
+}
+.footer-content,
+.footer-copyright {
+   width: min(100%, var(--layout-max));
+   margin-inline: auto;
+   padding-inline: var(--layout-gutter);
+}
