@@ -328,3 +328,13 @@
       top: clamp(5rem, 11vh, 8rem);
    }
 }
+
+/* More room inside the hero copy, without adding space below the CTA. */
+@media (min-width: 901px) {
+   .hero-description {
+      margin-top: clamp(3.5rem, 6vh, 5rem);
+   }
+   .hero-explore {
+      margin-top: clamp(2rem, 4vh, 3rem);
+   }
+}
