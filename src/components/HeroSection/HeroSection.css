@@ -265,3 +265,9 @@
 @media (max-width: 900px) {
    .hero-art { position: static; transform: none; }
 }
+
+/* Anchor the abstract study at the upper-right, and end the hero immediately after its CTA. */
+.hero-grid { padding-bottom: 0; }
+@media (min-width: 901px) {
+   .hero-art { top: -1rem; transform: none; }
+}

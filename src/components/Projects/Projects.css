@@ -474,3 +474,5 @@ body.modal-open {
    text-align: left;
    justify-self: start;
 }
+
+.projects-container:not(.projects-container--grid) { margin-top: 0; }
