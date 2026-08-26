@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
+import { rp } from './base';
 
 // 组件
 import { Header } from './components/Header/Header';
@@ -31,43 +32,45 @@ export default function App() {
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
 
-   if (window.location.pathname === '/notes') {
+   const P = window.location.pathname;
+
+   if (P === rp('/notes')) {
       return <NotesIndexPage />;
    }
 
-   if (window.location.pathname === '/notes/ai-bid-review') {
+   if (P === rp('/notes/ai-bid-review')) {
       return <EngineeringNotesPage />;
    }
 
-   if (window.location.pathname === '/projects') {
+   if (P === rp('/projects')) {
       return <ProjectsPage />;
    }
 
-   if (window.location.pathname === '/about') {
+   if (P === rp('/about')) {
       return <AboutPage />;
    }
 
-   if (window.location.pathname === '/about/skills') {
+   if (P === rp('/about/skills')) {
       return <SkillsPage />;
    }
 
-   if (window.location.pathname === '/about/honors') {
+   if (P === rp('/about/honors')) {
       return <HonorsPage />;
    }
 
-   if (window.location.pathname === '/join') {
+   if (P === rp('/join')) {
       return <JoinPage />;
    }
 
-   if (window.location.pathname === '/about/life') {
+   if (P === rp('/about/life')) {
       return <EventsPage />;
    }
 
-   if (window.location.pathname === '/about/messages') {
+   if (P === rp('/about/messages')) {
       return <MessagesPage />;
    }
 
-   if (window.location.pathname === '/members') {
+   if (P === rp('/members')) {
       return <MembersPage />;
    }
 

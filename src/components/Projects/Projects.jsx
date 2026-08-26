@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { featuredProjectsData } from '../../data/featured-projects-data';
 import { projectsData } from '../../data/projects-data';
+import { rp } from '../../base';
 
 import 'swiper/css';
 import './Projects.css';
@@ -58,7 +59,7 @@ export function Projects({ gridView = false }) {
                         </article>
                      ))}
                   </div>
-                  <a className='projects-more' href='/projects'>更多项目 <span>→</span></a>
+                  <a className='projects-more' href={rp('/projects')}>更多项目 <span>→</span></a>
                </>
             )}
          </section>
