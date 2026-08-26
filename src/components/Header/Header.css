@@ -32,7 +32,7 @@ header a {
    animation: none;
    font-family: var(--font-mono);
    font-size: 0.9rem;
-   font-weight: var(--weight-medium);
+   font-weight: 700;
    letter-spacing: 0.06em;
    text-transform: uppercase;
    display: inline-block;
@@ -301,14 +301,20 @@ header a {
    cursor: pointer;
 }
 
-.nav-dropdown__trigger span {
-   font-size: 0.85em;
+.nav-dropdown__chevron {
+   display: inline-block;
+   width: 0.4rem;
+   height: 0.4rem;
+   margin-top: -0.2rem;
+   border-right: 1px solid currentColor;
+   border-bottom: 1px solid currentColor;
+   transform: rotate(45deg);
    transition: transform 0.2s ease;
 }
 
 .nav-dropdown__menu {
    position: absolute;
-   top: calc(100% + 0.9rem);
+   top: calc(100% + 0.65rem);
    right: 0;
    display: grid;
    min-width: 150px;
@@ -328,8 +334,8 @@ header a {
    transform: translateY(0);
 }
 
-.nav-dropdown:hover .nav-dropdown__trigger span,
-.nav-dropdown:focus-within .nav-dropdown__trigger span {
+.nav-dropdown:hover .nav-dropdown__chevron,
+.nav-dropdown:focus-within .nav-dropdown__chevron {
    transform: rotate(180deg);
 }
 

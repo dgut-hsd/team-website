@@ -19,7 +19,7 @@ export function Header() {
             <li><a href='#projects' className='nav-links'>项目</a></li>
             <li><a href='#timeline' className='nav-links'>工程笔记</a></li>
             <li className='nav-dropdown'>
-               <button type='button' className='nav-links nav-dropdown__trigger'>关于 <span aria-hidden='true'>⌄</span></button>
+               <button type='button' className='nav-links nav-dropdown__trigger'>关于 <span className='nav-dropdown__chevron' aria-hidden='true'></span></button>
                <div className='nav-dropdown__menu'>
                   <a href='#about-us' className='nav-dropdown__link'>About</a>
                   <a href='#timeline' className='nav-dropdown__link'>消息</a>
