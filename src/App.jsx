@@ -16,6 +16,8 @@ import { Events } from './components/Events/Events';
 import { Footer } from './components/Footer/Footer';
 import { JoinUs } from './components/JoinUs/JoinUs';
 import { MessagesPage } from './components/MessagesPage/MessagesPage';
+import { AboutPage } from './components/AboutPage/AboutPage';
+import { SkillsPage } from './components/SkillsPage/SkillsPage';
 
 export default function App() {
    useEffect(() => {
@@ -28,6 +30,14 @@ export default function App() {
    
       console.log('HSD欢迎你╰(*°▽°*)╯');
    }, []);
+
+   if (window.location.pathname === '/about') {
+      return <AboutPage />;
+   }
+
+   if (window.location.pathname === '/about/skills') {
+      return <SkillsPage />;
+   }
 
    if (window.location.pathname === '/about/messages') {
       return <MessagesPage />;

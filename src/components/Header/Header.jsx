@@ -6,6 +6,7 @@ function getActiveNav() {
    const hash = window.location.hash;
    if (path === '/members') return 'members';
    if (path === '/about/messages') return 'notes';
+   if (path === '/about' || path === '/about/skills') return 'about';
    if (hash === '#projects') return 'projects';
    if (hash === '#about-us' || hash === '#tech-stack' || hash === '#honors' || hash === '#events') return 'about';
    return path === '/' && !hash ? 'home' : '';
@@ -42,9 +43,9 @@ export function Header() {
             <li className={`nav-dropdown ${isAboutOpen ? 'is-open' : ''}`}>
                <button type='button' className={`nav-links nav-dropdown__trigger ${activeNav === 'about' ? 'is-active' : ''}`} onClick={() => setIsAboutOpen((open) => !open)}>关于 <span className='nav-dropdown__chevron' aria-hidden='true'></span></button>
                <div className='nav-dropdown__menu'>
-                  <a href='#about-us' className='nav-dropdown__link'>关于我们</a>
+                  <a href='/about' className='nav-dropdown__link'>关于我们</a>
                   <a href='/about/messages' className='nav-dropdown__link'>消息</a>
-                  <a href='#tech-stack' className='nav-dropdown__link'>技能库</a>
+                  <a href='/about/skills' className='nav-dropdown__link'>技能库</a>
                   <a href='#honors' className='nav-dropdown__link'>荣誉</a>
                   <a href='#events' className='nav-dropdown__link'>HSD生活</a>
                </div>
