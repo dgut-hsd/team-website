@@ -7,7 +7,6 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { HeroSection } from './components/HeroSection/HeroSection';
 import { AboutUs } from './components/AboutUs/AboutUs';
-import { TimeLine } from './components/Timeline/TimeLine';
 import { TechStack } from './components/TechStack/TechStack';
 import { Honors } from './components/Honors/Honors';
 import { Team } from './components/Team/Team';
@@ -37,7 +36,6 @@ export default function App() {
          <main>
             <HeroSection />
             <AboutUs />
-            <TimeLine />
             <TechStack />
             <Honors />
             <Team />
