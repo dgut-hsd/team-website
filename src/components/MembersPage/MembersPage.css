@@ -201,3 +201,52 @@
    max-width: 100%;
    overflow: hidden;
 }
+
+
+/* Compact page masthead: keep focus on people */
+.members-page__main {
+   padding-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+.members-page__intro {
+   padding-bottom: clamp(1.75rem, 3vw, 3rem);
+}
+.members-page__intro span {
+   font-size: .68rem;
+   letter-spacing: .08em;
+}
+.members-page__intro h1 {
+   margin-top: .55rem;
+   font-size: clamp(1.8rem, 3.5vw, 3rem);
+   letter-spacing: -.03em;
+}
+.members-page__intro p {
+   max-width: 28rem;
+   margin-top: .55rem;
+   font-size: .9rem;
+   line-height: 1.55;
+}
+.members-page .team-container {
+   padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 767px) {
+   .members-page__main {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+   }
+   .members-page__intro {
+      padding-bottom: 1.5rem;
+   }
+   .members-page__intro h1 {
+      margin-top: .45rem;
+      font-size: 1.8rem;
+   }
+   .members-page__intro p {
+      margin-top: .45rem;
+      font-size: .88rem;
+      line-height: 1.55;
+   }
+   .members-page .team-container {
+      padding-top: 2rem;
+   }
+}
