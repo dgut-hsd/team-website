@@ -18,7 +18,7 @@ export function HeroSection() {
                      我们通过构建真实系统理解计算，并探索新的可能。
                   </p>
 
-                  <a className='hero-explore' href='/projects'>
+                  <a className='hero-explore' href='#projects'>
                      <span>查看项目</span>
                      <span className='hero-explore__arrow' aria-hidden='true'>
                         ↓

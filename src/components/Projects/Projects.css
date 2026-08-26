@@ -440,3 +440,11 @@ body.modal-open {
 .project-card__body {
    border: 0;
 }
+
+/* Match the hero content width and gutters. */
+.projects-container {
+   width: 100%;
+   max-width: var(--layout-max);
+   padding-left: var(--layout-gutter);
+   padding-right: var(--layout-gutter);
+}
