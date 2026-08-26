@@ -315,3 +315,16 @@
       top: clamp(4.5rem, 9vh, 7rem);
    }
 }
+
+/* Put the extra air above the story, not beneath the CTA. */
+@media (min-width: 901px) {
+   .hero-section { min-height: auto; }
+   .hero-shell { min-height: auto; }
+   .hero-grid {
+      padding-top: clamp(5rem, 11vh, 8rem);
+      padding-bottom: 0;
+   }
+   .hero-art {
+      top: clamp(5rem, 11vh, 8rem);
+   }
+}
