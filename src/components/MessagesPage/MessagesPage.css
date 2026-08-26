@@ -1,0 +1,40 @@
+.messages-page {
+   min-height: 100vh;
+   background: var(--bg);
+   color: var(--text);
+}
+
+.messages-page__main {
+   width: min(100% - 2rem, var(--layout-max));
+   margin: 0 auto;
+   padding: clamp(4rem, 10vw, 9rem) 0;
+}
+
+.messages-page__intro {
+   padding-bottom: clamp(3rem, 7vw, 6rem);
+   border-bottom: var(--rule);
+}
+
+.messages-page__intro span {
+   color: var(--accent);
+   font-family: var(--font-mono);
+   font-size: var(--text-xs);
+   letter-spacing: 0.06em;
+}
+
+.messages-page__intro h1 {
+   margin: 1rem 0 0;
+   font-size: clamp(3rem, 8vw, 7rem);
+   font-weight: var(--weight-medium);
+   letter-spacing: -0.04em;
+}
+
+.messages-page__intro p {
+   margin: 1.5rem 0 0;
+   color: var(--text-secondary);
+   font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.messages-page .timeline-container {
+   padding-top: clamp(4rem, 8vw, 8rem);
+}

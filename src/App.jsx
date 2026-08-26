@@ -16,6 +16,7 @@ import { Faq } from './components/Faq/Faq';
 import { Events } from './components/Events/Events';
 import { Footer } from './components/Footer/Footer';
 import { JoinUs } from './components/JoinUs/JoinUs';
+import { MessagesPage } from './components/MessagesPage/MessagesPage';
 
 export default function App() {
    useEffect(() => {

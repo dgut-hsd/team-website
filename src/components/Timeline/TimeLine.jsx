@@ -97,13 +97,13 @@ export function TimeLine() {
                      <TimelineDot
                         variant='outlined'
                         sx={{
-                           borderColor: '#0EA5E9',
+                           borderColor: 'var(--accent)',
                            borderWidth: '3px',
                         }}
                      />
                      {!item.isLast && (
                         <TimelineConnector
-                           sx={{ backgroundColor: '#E5E7EB' }}
+                           sx={{ backgroundColor: 'var(--border-strong)' }}
                         />
                      )}
                   </TimelineSeparator>
