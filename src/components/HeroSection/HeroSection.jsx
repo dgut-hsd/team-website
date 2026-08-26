@@ -19,7 +19,7 @@ export function HeroSection() {
                   </p>
 
                   <a className='hero-explore' href='#projects'>
-                     <span>查看我们的项目</span>
+                     <span>查看项目</span>
                      <span className='hero-explore__arrow' aria-hidden='true'>
                         ↓
                      </span>
