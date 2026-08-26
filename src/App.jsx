@@ -10,6 +10,7 @@ import { AboutUs } from './components/AboutUs/AboutUs';
 import { TechStack } from './components/TechStack/TechStack';
 import { Honors } from './components/Honors/Honors';
 import { Team } from './components/Team/Team';
+import { MembersPage } from './components/MembersPage/MembersPage';
 import { Projects } from './components/Projects/Projects';
 import { Faq } from './components/Faq/Faq';
 import { Events } from './components/Events/Events';
@@ -31,6 +32,10 @@ export default function App() {
 
    if (window.location.pathname === '/about/messages') {
       return <MessagesPage />;
+   }
+
+   if (window.location.pathname === '/members') {
+      return <MembersPage />;
    }
 
    return (

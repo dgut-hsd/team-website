@@ -14,7 +14,7 @@ export function Header() {
          <input type='checkbox' id='menu-toggle' className='menu-toggle' />
          <label htmlFor='menu-toggle' className='hamburger'><span></span></label>
          <ul className='menu'>
-            <li><a href='#team' className='nav-links'>成员</a></li>
+            <li><a href='/members' className='nav-links'>成员</a></li>
             <li><a href='#projects' className='nav-links'>项目</a></li>
             <li><a href='/about/messages' className='nav-links'>工程笔记</a></li>
             <li className={`nav-dropdown ${isAboutOpen ? 'is-open' : ''}`}>
