@@ -19,11 +19,18 @@ export function Header() {
 
    useEffect(() => {
       const syncActiveNav = () => setActiveNav(getActiveNav());
+      const syncProjectAnchor = (event) => {
+         if (event.target instanceof Element && event.target.closest("a[href='#projects']")) {
+            setActiveNav('projects');
+         }
+      };
       window.addEventListener('hashchange', syncActiveNav);
       window.addEventListener('popstate', syncActiveNav);
+      document.addEventListener('click', syncProjectAnchor, true);
       return () => {
          window.removeEventListener('hashchange', syncActiveNav);
          window.removeEventListener('popstate', syncActiveNav);
+         document.removeEventListener('click', syncProjectAnchor, true);
       };
    }, []);
 
