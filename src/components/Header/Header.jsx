@@ -18,7 +18,16 @@ export function Header() {
             <li><a href='#team' className='nav-links'>成员</a></li>
             <li><a href='#projects' className='nav-links'>项目</a></li>
             <li><a href='#timeline' className='nav-links'>工程笔记</a></li>
-            <li><a href='#about-us' className='nav-links'>关于</a></li>
+            <li className='nav-dropdown'>
+               <button type='button' className='nav-links nav-dropdown__trigger'>关于 <span aria-hidden='true'>⌄</span></button>
+               <div className='nav-dropdown__menu'>
+                  <a href='#about-us' className='nav-dropdown__link'>About</a>
+                  <a href='#timeline' className='nav-dropdown__link'>消息</a>
+                  <a href='#tech-stack' className='nav-dropdown__link'>技术</a>
+                  <a href='#honors' className='nav-dropdown__link'>荣誉</a>
+                  <a href='#events' className='nav-dropdown__link'>Life at HSD</a>
+               </div>
+            </li>
             <li><a href='https://github.com/HSD-DGUT' className='nav-links' target='_blank' rel='noreferrer'>GitHub ↗</a></li>
          </ul>
 

@@ -110,7 +110,7 @@ header a {
    display: block;
    width: 24px;
    height: 2px;
-   background-color: #007bff;
+   background-color: var(--text);
    position: relative;
    content: '';
    transition: all 0.25s ease;
@@ -128,9 +128,9 @@ header a {
 }
 
 .nav-join-link {
-   background-color: #007bff;
-   color: white;
-   border: 1px solid #007bff;
+   background-color: var(--text);
+   color: var(--bg);
+   border: 1px solid var(--text);
    white-space: nowrap;
    padding: 0.5rem 1rem;
    border-radius: var(--radius-sm);
@@ -285,4 +285,63 @@ header a {
       padding: 0.6rem 1.5rem;
       font-size: 1.2rem;
    }
+}
+
+.nav-dropdown {
+   position: relative;
+}
+
+.nav-dropdown__trigger {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.35rem;
+   border: 0;
+   background: transparent;
+   cursor: pointer;
+}
+
+.nav-dropdown__trigger span {
+   font-size: 0.85em;
+   transition: transform 0.2s ease;
+}
+
+.nav-dropdown__menu {
+   position: absolute;
+   top: calc(100% + 0.9rem);
+   right: 0;
+   display: grid;
+   min-width: 150px;
+   padding: 0.5rem;
+   background: var(--bg);
+   border: 1px solid var(--border);
+   opacity: 0;
+   pointer-events: none;
+   transform: translateY(-6px);
+   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+   opacity: 1;
+   pointer-events: auto;
+   transform: translateY(0);
+}
+
+.nav-dropdown:hover .nav-dropdown__trigger span,
+.nav-dropdown:focus-within .nav-dropdown__trigger span {
+   transform: rotate(180deg);
+}
+
+.nav-dropdown__link {
+   padding: 0.55rem 0.65rem;
+   color: var(--text-secondary);
+   font-family: var(--font-sans);
+   font-size: var(--text-sm);
+   text-decoration: none;
+}
+
+.nav-dropdown__link:hover,
+.nav-dropdown__link:focus-visible {
+   color: var(--text);
+   background: var(--surface);
 }
