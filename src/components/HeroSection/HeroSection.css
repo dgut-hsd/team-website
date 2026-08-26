@@ -370,3 +370,11 @@
       top: clamp(8rem, 16vh, 12rem);
    }
 }
+
+/* Final small increase to the desktop hero rhythm. */
+@media (min-width: 901px) {
+   .hero-grid { padding-top: clamp(9rem, 18vh, 13rem); }
+   .hero-description { margin-top: clamp(8rem, 12vh, 10rem); }
+   .hero-explore { margin-top: clamp(5rem, 8vh, 6.5rem); }
+   .hero-art { top: clamp(9rem, 18vh, 13rem); }
+}
