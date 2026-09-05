@@ -1,5 +1,6 @@
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
+import { rp } from '../../base';
 import './NotesIndexPage.css';
 
 const notes = [
@@ -8,7 +9,7 @@ const notes = [
       category: 'AI SYSTEMS',
       title: 'AI 标书工程笔记',
       excerpt: '从文档解析、Agent 编排到可回溯的审查结果：一次关于可靠性、证据与真实工作流的实践记录。',
-      href: '/notes/ai-bid-review',
+      href: rp('/notes/ai-bid-review'),
    },
 ];
 
